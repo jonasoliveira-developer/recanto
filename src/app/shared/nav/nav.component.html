@@ -1,0 +1,85 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav">
+      <img src="assets/logo.png" alt="imagem de um coqueiro com sol ao lado." />
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="home">
+              <div class="list-item--content">
+                <i class="material-icons">home</i>
+                <span>Home</span> 
+              </div>
+            </a>
+
+            <a mat-list-item routerLink="/">
+              <div class="list-item--content">
+                <i class="material-icons">announcement</i>
+                <span>Avisos</span> 
+              </div>          
+            </a>
+
+        <a mat-list-item routerLink="/">
+          <div class="list-item--content">
+            <i class="material-icons">build</i>
+            <span>Serviços</span> 
+          </div>    
+        </a>
+
+        <a mat-list-item routerLink="/">
+          <div class="list-item--content">
+            <i class="material-icons">warning</i>
+            <span>Ocorrências</span> 
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <div class="list-item--content">
+          <i class="material-icons">date_range</i>
+          <span>Reservas</span>
+      </div>
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <div class="list-item--content">
+          <i class="material-icons">credit_card</i>
+          <span>Financeiro</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="employees">
+        <div class="list-item--content">
+          <i class="material-icons">group</i>
+          <span>Funcionarios</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <div class="list-item--content">
+          <i class="material-icons">person</i>
+          <span>Residentes</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/">
+        <div class="list-item--content">
+          <i class="material-icons">logout</i>
+          <span>Sair</span>
+        </div>
+      </a>
+        </mat-nav-list>
+        
+    </mat-drawer>
+   
+    <div class="sidenav-content">
+      <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon >menu</mat-icon>
+      </button>
+      <app-header></app-header>
+     
+      <div> 
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    
+  
+  </mat-drawer-container>
+  
