@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field-outline-start,
+.mat-form-field-outline-end {
+  border-radius: 0px !important;
+}

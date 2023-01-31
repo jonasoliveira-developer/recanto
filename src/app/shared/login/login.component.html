@@ -1,0 +1,44 @@
+<div class="container">
+   
+    <form id="form" >
+        <img src="../../../assets/logo-green.png">
+        <h1>Faça seu login</h1>
+    
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label class="color">E-mail</mat-label>
+          <input 
+          required
+          [(ngModel)]="creds.email"
+          [formControl]="email"
+           name="email"
+           matInput
+           placeholder="Ex. fulano@seuemail.com"
+           
+         >
+        </mat-form-field>
+
+        <mat-form-field id="field" class="full-width">
+            <mat-label class="color">Senha</mat-label>
+            <input
+             required
+             [(ngModel)]="creds.password"
+             [formControl]="password"
+             name="password"
+             type="password"
+             matInput
+             placeholder="Ex. 123..."
+             
+
+             >
+          </mat-form-field>
+      <button 
+        [disabled]="!fieldValidator()" 
+        mat-stroked-button
+        class="full-width"
+        (click)="logar()"
+        >
+           <span>Entrar</span>
+      </button>
+      </form>
+      
+</div>

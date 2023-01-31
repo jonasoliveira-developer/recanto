@@ -1,6 +1,6 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav">
-      <img src="assets/logo.png" alt="imagem de um coqueiro com sol ao lado." />
+      <img src="assets/logo-green.png" alt="imagem de um coqueiro com sol ao lado." />
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="home">
               <div class="list-item--content">
@@ -58,7 +58,7 @@
         </div>
       </a>
 
-      <a mat-list-item routerLink="/">
+      <a mat-list-item (click)="logout()">
         <div class="list-item--content">
           <i class="material-icons">logout</i>
           <span>Sair</span>

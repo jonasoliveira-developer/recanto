@@ -1,15 +1,13 @@
 .container {
     height: 100%;
-    background: rgb(203, 203, 0);
-    background: radial-gradient(circle, rgb(213, 213, 30) 0%, rgb(229, 218, 0) 100%); 
-
+   
 }
 
 .sidenav {
    width: 13rem;
   
 background: rgb(47,206,47);
-background: linear-gradient(90deg, rgba(47,206,47,1) 0%, rgb(145, 236, 0) 100%, rgb(140, 142, 0) 100%); 
+background: linear-gradient(90deg, rgb(34, 153, 34) 0%, rgb(109, 177, 0) 100%, rgb(100, 102, 0) 100%); 
 }
 
 .list-item--content {
@@ -21,7 +19,7 @@ background: linear-gradient(90deg, rgba(47,206,47,1) 0%, rgb(145, 236, 0) 100%, 
     margin-right: .6rem;
 }
 .material-icons, span {
-    color: #5E440C;
+    color:#FFF;
 }
 .menu {
     background-color: #2fce2f;
@@ -29,7 +27,7 @@ background: linear-gradient(90deg, rgba(47,206,47,1) 0%, rgb(145, 236, 0) 100%, 
 
 img {
     width: 100%;
-    height: 7rem;
+    height: 8rem;
     margin: .8rem auto 0 auto;
 }
 .menu {

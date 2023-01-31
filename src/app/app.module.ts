@@ -30,6 +30,8 @@ import { NavComponent } from './shared/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { EmployeeListComponent } from './pages/employee/employee.list/employee.list.component';
+import { LoginComponent } from './shared/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -40,7 +42,8 @@ import { EmployeeListComponent } from './pages/employee/employee.list/employee.l
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { EmployeeListComponent } from './pages/employee/employee.list/employee.l
     MatIconModule,
     MatListModule,
     MatCardModule,
+    ToastrModule.forRoot({timeOut:4000,closeButton:true, progressBar:true})
   ],
   providers: [],
   bootstrap: [AppComponent]

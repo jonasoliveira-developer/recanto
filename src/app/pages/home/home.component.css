@@ -2,9 +2,9 @@
     width: 70%;
     margin:  auto;
     padding: 1rem;
-    color: #5E440C;
+    color: #FFF;
     background: rgb(34,193,195);
-    background: linear-gradient(71deg, rgba(34,193,195,1) 0%, rgba(253,241,45,1) 100%); 
+    background: linear-gradient(71deg, rgb(34, 195, 93) 0%, rgb(215, 206, 40) 100%); 
     border-radius: 3rem;
 
 }
