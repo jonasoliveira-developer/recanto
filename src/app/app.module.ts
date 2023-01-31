@@ -32,6 +32,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { EmployeeListComponent } from './pages/employee/employee.list/employee.list.component';
 import { LoginComponent } from './shared/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 
 
@@ -72,7 +73,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatCardModule,
     ToastrModule.forRoot({timeOut:4000,closeButton:true, progressBar:true})
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
