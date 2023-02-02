@@ -4,5 +4,6 @@ export interface IEmployee {
     cpf: string;
     email:string;
     password:string
-    profiles: string[]
+    profiles: string[],
+    date:any;
 }

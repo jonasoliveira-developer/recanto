@@ -1,5 +1,5 @@
 <mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav">
+    <mat-drawer #drawer class="sidenav" >
       <img src="assets/logo-green.png" alt="imagem de um coqueiro com sol ao lado." />
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="home">
@@ -69,17 +69,16 @@
     </mat-drawer>
    
     <div class="sidenav-content">
+
       <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
         <mat-icon >menu</mat-icon>
       </button>
       <app-header></app-header>
-     
       <div> 
         <router-outlet></router-outlet>
       </div>
-    </div>
-
-    
-  
+    </div> 
+    <app-footer></app-footer>
   </mat-drawer-container>
+  
   

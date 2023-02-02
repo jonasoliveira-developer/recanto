@@ -33,6 +33,11 @@ import { EmployeeListComponent } from './pages/employee/employee.list/employee.l
 import { LoginComponent } from './shared/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { FooterComponent } from './shared/footer/footer.component';
+import { EmpoloyeeCreateComponent } from './pages/employee/empoloyee.create/empoloyee.create.component';
+import { NgxMaskModule } from 'ngx-mask';
+
+
 
 
 
@@ -44,7 +49,9 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     HomeComponent,
     HeaderComponent,
     EmployeeListComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
+    EmpoloyeeCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +78,9 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    ToastrModule.forRoot({timeOut:4000,closeButton:true, progressBar:true})
+    ToastrModule.forRoot({timeOut:4000,closeButton:true, progressBar:true}),
+    NgxMaskModule.forRoot()
+    
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]

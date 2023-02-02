@@ -1,0 +1,58 @@
+.container {
+    width: 70%;
+    padding:.5rem;
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+     
+   
+ }
+
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 .7rem;
+ }
+
+table {
+    width: 100%;
+   
+}
+
+thead {
+    width: 80%;
+}
+
+
+h1 {
+    font-size: 2rem;
+    color: green;
+}
+
+mat-label {
+    color:green;
+}
+
+mat-form-field {
+    width: 100%;
+    background-color: #FFF;
+}
+
+button {
+    align-self: flex-end;
+    width: 5rem;
+    margin: 1rem;
+   
+
+}
+
+.mat-mdc-raised-button.mat-unthemed {
+    --mdc-protected-button-container-color: green;
+    --mdc-protected-button-label-text-color: #FFF;
+    font-weight: bold;
+  }
+
+

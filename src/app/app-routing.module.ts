@@ -1,3 +1,4 @@
+import { EmpoloyeeCreateComponent } from './pages/employee/empoloyee.create/empoloyee.create.component';
 import { AuthGuard } from './auth/auth.guard';
 import { NavComponent } from './shared/nav/nav.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ const routes: Routes = [
   
   {path:'', component: NavComponent,canActivate: [AuthGuard], children: [
     {path:'employees', component: EmployeeListComponent},
+    {path:'employees/create', component: EmpoloyeeCreateComponent},
     {path: 'home', component: HomeComponent },
   ]},
   

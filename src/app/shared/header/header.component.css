@@ -1,15 +1,19 @@
 .container {
     display: flex;
+
     justify-content: center;
-    align-items: center;
-    margin: 0 1rem 0 1rem;
+    justify-content: center;
+    margin:  auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    background-color:  #fff421;
 }
 
-h1 {
-    margin-top: 1rem;
-    padding: 1rem 2%;
-    border-radius: 5rem;
-    text-align: center;
-    color: #2fce2f;
 
+h1 {
+    width: 70%;
+    color: #0c810c;
+    font-weight: bold;
+    text-align: center;
 }

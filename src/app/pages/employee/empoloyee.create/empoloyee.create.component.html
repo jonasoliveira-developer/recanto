@@ -1,0 +1,85 @@
+
+<div class="container">
+    
+    <form class="form">
+        
+
+            <mat-form-field appearance="fill">
+              <mat-label>Nome</mat-label>
+              <mat-icon matSuffix>
+                <span class="material-icons-outlined"> drive_file_rename_outline </span>
+             </mat-icon>
+              <input 
+              [(ngModel)]="employee.name"
+              required
+              maxlength="50"
+              [formControl]="name"
+               name="name"
+               matInput 
+               placeholder="Fulano de tal">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>CPF</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> 123</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="employee.cpf"
+                required=""
+                [formControl]="cpf"
+                name="cpf"
+                 matInput
+                 placeholder="000.000.000-00"
+                 mask="000.000.000-00"
+                 >
+                 
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="full">
+                <mat-label>E-mail</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> email</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="employee.email"
+                 required
+                 [formControl]="email"
+                 name="email"
+                 matInput 
+                 placeholder="fulano@seuemail.com"
+                 type="email">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Senha</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> lock</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="employee.password"
+                required=""
+                [formControl]="password"
+                name="password"
+                 matInput 
+                 placeholder="123.."
+                 type="password">
+              </mat-form-field>
+          
+       
+          
+        <section class="section">
+            <mat-checkbox (click)="addProfile(0)"  class="margin" color="Primary-yellow">Admin</mat-checkbox>
+            <mat-checkbox (click)="addProfile(1)"  class="margin" color="primary-yellow">Funcionario</mat-checkbox>
+            <mat-checkbox (click)="addProfile(2)"  class="margin" color="primary-yellow">Residente</mat-checkbox>
+          </section>
+          <div class="buttons">
+            <button (click)="create()" mat-button color="primary" [disabled]="!fieldValidate()">Cadastrar</button>
+            <button (click)="goBack()" mat-button color="warn">Voltar</button>
+          </div>
+          
+    </form>
+    <div class="aside">
+        <img src="../../../../assets/create.svg" alt="">
+    </div>
+</div>
