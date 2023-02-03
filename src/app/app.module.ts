@@ -36,6 +36,7 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { FooterComponent } from './shared/footer/footer.component';
 import { EmpoloyeeCreateComponent } from './pages/employee/empoloyee.create/empoloyee.create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empoloyee.update.component';
 
 
 
@@ -51,7 +52,8 @@ import { NgxMaskModule } from 'ngx-mask';
     EmployeeListComponent,
     LoginComponent,
     FooterComponent,
-    EmpoloyeeCreateComponent
+    EmpoloyeeCreateComponent,
+    EmpoloyeeUpdateComponent
   ],
   imports: [
     BrowserModule,

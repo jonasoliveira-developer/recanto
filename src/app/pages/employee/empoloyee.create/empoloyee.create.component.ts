@@ -45,7 +45,6 @@ password: FormControl = new FormControl(null, Validators.minLength(3))
       this.router.navigate(['employees'])
       this.toast.success("Funcionário cadastrado com sucesso!");
     }, ex => {
-      console.log(ex);
       if(ex.error.errors) {
         ex.error.errors.map(x => this.toast.error(x.message))
       }
@@ -77,6 +76,6 @@ password: FormControl = new FormControl(null, Validators.minLength(3))
     }
     
     goBack():void {
-      this.router.navigate(['employees']);
+      this.router.navigate(['employees'])
     }
 }

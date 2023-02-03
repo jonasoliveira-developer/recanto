@@ -1,7 +1,8 @@
 .container {
     width: 70%;
+    height: 100%;
     padding:.5rem;
-    margin:  auto;
+    margin:  2rem auto;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
@@ -17,23 +18,13 @@
     padding: 0 .7rem;
  }
 
-table {
-    width: 100%;
-   
-}
-
-thead {
-    width: 80%;
-}
-
-
 h1 {
     font-size: 2rem;
-    color: green;
+    color:   #0c810c;
 }
 
 mat-label {
-    color:green;
+    color: #0c810c;
 }
 
 mat-form-field {
@@ -49,8 +40,23 @@ button {
 
 }
 
+.edit {
+    color: #FFF ;
+    margin: 0 .5rem 0 0;
+    background-color:#0c810c ;
+    padding: .3rem;
+    border-radius: 50%;
+}
+.delete {
+    color: #FFF ;
+    
+    background-color:rgb(219, 76, 76) ;
+    padding: .3rem;
+    border-radius: 50%;
+}
+
 .mat-mdc-raised-button.mat-unthemed {
-    --mdc-protected-button-container-color: green;
+    --mdc-protected-button-container-color:  #0c810c;
     --mdc-protected-button-label-text-color: #FFF;
     font-weight: bold;
   }

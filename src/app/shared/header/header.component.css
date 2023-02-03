@@ -1,19 +1,17 @@
 .container {
-    display: flex;
-
-    justify-content: center;
-    justify-content: center;
-    margin:  auto;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    background-color:  #fff421;
+ width: 100%;
+ padding: 1.5rem 0;
+ display: flex;
+ justify-content: center;
+ background-color: green;
+ 
+    
 }
 
 
 h1 {
     width: 70%;
-    color: #0c810c;
+    color: #fcfc7a;
     font-weight: bold;
     text-align: center;
 }

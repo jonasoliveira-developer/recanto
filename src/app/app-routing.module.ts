@@ -6,6 +6,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { EmployeeListComponent } from './pages/employee/employee.list/employee.list.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './shared/login/login.component';
+import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empoloyee.update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'', component: NavComponent,canActivate: [AuthGuard], children: [
     {path:'employees', component: EmployeeListComponent},
     {path:'employees/create', component: EmpoloyeeCreateComponent},
+    {path:'employees/update/:id', component: EmpoloyeeUpdateComponent},
     {path: 'home', component: HomeComponent },
   ]},
   

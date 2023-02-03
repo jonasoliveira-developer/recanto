@@ -11,6 +11,10 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
+  findById(id:any):Observable<IEmployee> {
+    return this.http.get<IEmployee>(`${API_CONFIG.baseURL}/employees/${id}`)
+  }
+
   findAll(): Observable<IEmployee[]> {
    return this.http.get<IEmployee[]>(`${API_CONFIG.baseURL}/employees`)
   }
@@ -18,4 +22,10 @@ export class EmployeeService {
   create(employee: IEmployee): Observable<IEmployee> {
     return this.http.post<IEmployee>(`${API_CONFIG.baseURL}/employees`, employee)
   }
+  update(employee: IEmployee): Observable<IEmployee> {
+    return this.http.put<IEmployee>(`${API_CONFIG.baseURL}/employees/${employee.id}`, employee)
+  }
+
+
+
 }

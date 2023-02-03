@@ -1,12 +1,11 @@
 .container {
     width: 80%; 
     margin: 1rem auto;
-    margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 1rem;
-    border: 1px solid  #0c810c ;
+    border: 1px solid  #0c810c;
 }
 
 
@@ -22,6 +21,7 @@
 
    
 }
+
 
 
 h1 {
@@ -47,7 +47,9 @@ mat-label {
 
 
 @media(max-width:900px) {
-  
+    .aside {
+      display: none;
+    }
     img {
       display: none;
     }

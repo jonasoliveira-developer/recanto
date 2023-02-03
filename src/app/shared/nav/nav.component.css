@@ -1,13 +1,14 @@
 .container {
     height: 100%;
-  
+    background-color:#f2f2c2;
+    
    
 }
 
 
 .sidenav {
    width: 13rem;
-  background-color: #fff421;
+  background-color:#fcfc7a;
 
 }
 
@@ -24,9 +25,8 @@
 }
 .menu {
     position: absolute;
-    left: 1rem;
-    top: 1rem;
-    background-color: #0c810c;
+    margin: .5rem;
+    background-color:#fcfc7a;
 
 }
 
@@ -38,7 +38,6 @@ img {
 }
 
 .sidenav-content {
-    width: 100%;
     height: 100%;
 }
 
