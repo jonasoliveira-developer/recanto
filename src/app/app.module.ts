@@ -37,6 +37,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { EmpoloyeeCreateComponent } from './pages/employee/empoloyee.create/empoloyee.create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empoloyee.update.component';
+import { EmpoloyeeDeleteComponent } from './pages/employee/empoloyee.delete/empoloyee.delete.component';
 
 
 
@@ -53,7 +54,8 @@ import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empo
     LoginComponent,
     FooterComponent,
     EmpoloyeeCreateComponent,
-    EmpoloyeeUpdateComponent
+    EmpoloyeeUpdateComponent,
+    EmpoloyeeDeleteComponent
   ],
   imports: [
     BrowserModule,

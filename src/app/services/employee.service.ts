@@ -26,6 +26,10 @@ export class EmployeeService {
     return this.http.put<IEmployee>(`${API_CONFIG.baseURL}/employees/${employee.id}`, employee)
   }
 
+  delete(id:any):Observable<IEmployee> {
+   return this.http.delete<IEmployee>(`${API_CONFIG.baseURL}/employees/${id}`)
+  }
+
 
 
 }

@@ -1,0 +1,78 @@
+<div class="container">
+    
+    <form class="form">
+        <h1>Deletar Funcionário</h1>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Nome</mat-label>
+              <mat-icon matSuffix>
+                <span class="material-icons-outlined"> drive_file_rename_outline </span>
+             </mat-icon>
+              <input 
+              [(ngModel)]="employee.name"
+               name="name"
+               matInput
+               [disabled]="true"
+               >
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>CPF</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> 123</span>
+                 </mat-icon>
+                <input
+                 [(ngModel)]="employee.cpf"
+                 name="cpf"
+                 matInput
+                 [disabled]="true"
+                 
+                 >
+                 
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="full">
+                <mat-label>E-mail</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> email</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="employee.email"
+                 name="email"
+                 matInput 
+                 matInput
+                 [disabled]="true"
+                 >
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Senha</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> lock</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="employee.password"
+                name="password"
+                 type="password"
+                 matInput
+                 [disabled]="true"
+                 >
+              </mat-form-field>
+          
+       
+          
+        <section class="section">
+            <mat-checkbox  [disabled]="true" class="margin" color="Primary-yellow">Admin</mat-checkbox>
+            <mat-checkbox  [disabled]="true" class="margin" color="primary-yellow">Funcionario</mat-checkbox>
+            <mat-checkbox  [disabled]="true" class="margin" color="primary-yellow">Residente</mat-checkbox>
+          </section>
+          <div class="buttons">
+            <button (click)="delete()" mat-button color="primary" >Deletar</button>
+            <button (click)="goBack()" mat-button color="warn">Voltar</button>
+          </div>
+          
+    </form>
+    <div class="aside">
+        <img src="../../../../assets/update.svg" alt="">
+    </div>
+</div>

@@ -6,11 +6,12 @@ import { IEmployee } from './../../../models/employee';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-empoloyee.update',
-  templateUrl: './empoloyee.update.component.html',
-  styleUrls: ['./empoloyee.update.component.css']
+  selector: 'app-empoloyee.delete',
+  templateUrl: './empoloyee.delete.component.html',
+  styleUrls: ['./empoloyee.delete.component.css']
 })
-export class EmpoloyeeUpdateComponent implements OnInit{
+export class EmpoloyeeDeleteComponent {
+
   employee: IEmployee = {
     id:'',
     name:'',
@@ -23,11 +24,6 @@ export class EmpoloyeeUpdateComponent implements OnInit{
     
   
   }
-  
-  name: FormControl = new FormControl(null, Validators.minLength(3));
-  cpf: FormControl = new FormControl(null, [Validators.minLength(11), Validators.required]);
-  email: FormControl = new FormControl(null, Validators.email);
-  password: FormControl = new FormControl(null, Validators.minLength(3))
   
     constructor( 
       private service: EmployeeService,
@@ -48,10 +44,10 @@ export class EmpoloyeeUpdateComponent implements OnInit{
       })
     }
   
-    update():void {
-      this.service.update(this.employee).subscribe(respose => {
+    delete():void {
+      this.service.delete(this.employee.id).subscribe(respose => {
         this.router.navigate(['employees'])
-        this.toast.success("Funcionário atualizado com sucesso!");
+        this.toast.success("Funcionário deletado com sucesso!");
       }, ex => {
         if(ex.error.errors) {
           ex.error.errors.map(x => this.toast.error(x.message))
@@ -61,27 +57,6 @@ export class EmpoloyeeUpdateComponent implements OnInit{
         }
       })
     }
-    
-    addProfile(profile:any):void {
-       
-        if(this.employee.profiles.includes(profile)){
-          this.employee.profiles.splice(this.employee.profiles.indexOf(profile))
-        }
-        else {
-          this.employee.profiles.push(profile)
-        }
-  
-        console.log(this.employee.profiles)
-      }
-  
-  
-  
-      fieldValidate(): boolean {
-        return this.name.valid && 
-               this.cpf.valid && 
-               this.email.valid && 
-               this.password.valid
-      }
       
       goBack():void {
         this.router.navigate(['employees'])

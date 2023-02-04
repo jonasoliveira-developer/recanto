@@ -1,5 +1,6 @@
 .container {
     width: 70%;
+    min-width: 550px;
     height: 100%;
     padding:.5rem;
     margin:  2rem auto;
@@ -8,6 +9,13 @@
     border-radius: 1rem;
      
    
+ }
+
+ @media(max-width:756px) {
+    .container {
+        width: 95%;
+       
+    }
  }
 
  .header {
@@ -42,7 +50,7 @@ button {
 
 .edit {
     color: #FFF ;
-    margin: 0 .5rem 0 0;
+    margin:.5rem .1rem 0 0;;
     background-color:#0c810c ;
     padding: .3rem;
     border-radius: 50%;
@@ -52,6 +60,7 @@ button {
     
     background-color:rgb(219, 76, 76) ;
     padding: .3rem;
+    margin:.5rem .1rem 0 0;
     border-radius: 50%;
 }
 

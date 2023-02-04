@@ -1,3 +1,4 @@
+import { EmpoloyeeDeleteComponent } from './pages/employee/empoloyee.delete/empoloyee.delete.component';
 import { EmpoloyeeCreateComponent } from './pages/employee/empoloyee.create/empoloyee.create.component';
 import { AuthGuard } from './auth/auth.guard';
 import { NavComponent } from './shared/nav/nav.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:'employees', component: EmployeeListComponent},
     {path:'employees/create', component: EmpoloyeeCreateComponent},
     {path:'employees/update/:id', component: EmpoloyeeUpdateComponent},
+    {path:'employees/delete/:id', component: EmpoloyeeDeleteComponent},
     {path: 'home', component: HomeComponent },
   ]},
   
