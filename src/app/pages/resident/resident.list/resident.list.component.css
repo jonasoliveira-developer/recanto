@@ -1,0 +1,73 @@
+.container {
+    width: 70%;
+    min-width: 550px;
+    height: 100%;
+    padding:.5rem;
+    margin:  2rem auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+     
+   
+ }
+
+ @media(max-width:756px) {
+    .container {
+        width: 95%;
+       
+    }
+ }
+
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 .7rem;
+ }
+
+h1 {
+    font-size: 2rem;
+    color:   #0c810c;
+}
+
+mat-label {
+    color: #0c810c;
+}
+
+mat-form-field {
+    width: 100%;
+    background-color: #FFF;
+}
+
+button {
+    align-self: flex-end;
+    width: 5rem;
+    margin: 1rem;
+   
+
+}
+
+.edit {
+    color: #FFF ;
+    margin:.5rem .1rem 0 0;;
+    background-color:#0c810c ;
+    padding: .3rem;
+    border-radius: 50%;
+}
+.delete {
+    color: #FFF ;
+    
+    background-color:rgb(219, 76, 76) ;
+    padding: .3rem;
+    margin:.5rem .1rem 0 0;
+    border-radius: 50%;
+}
+
+.mat-mdc-raised-button.mat-unthemed {
+    --mdc-protected-button-container-color:  #0c810c;
+    --mdc-protected-button-label-text-color: #FFF;
+    font-weight: bold;
+  }
+
+

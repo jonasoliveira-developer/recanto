@@ -1,8 +1,7 @@
-
 <div class="container">
     
     <form class="form">
-        <h1>Cadastrar Funcionário</h1>
+        <h1>Deletar Residente</h1>
 
             <mat-form-field appearance="fill">
               <mat-label>Nome</mat-label>
@@ -10,13 +9,11 @@
                 <span class="material-icons-outlined"> drive_file_rename_outline </span>
              </mat-icon>
               <input 
-              [(ngModel)]="employee.name"
-              required
-              maxlength="50"
-              [formControl]="name"
+              [(ngModel)]="resident.name"
                name="name"
-               matInput 
-               placeholder="Fulano de tal">
+               matInput
+               [disabled]="true"
+               >
             </mat-form-field>
 
             <mat-form-field appearance="fill">
@@ -25,13 +22,11 @@
                     <span class="material-icons-outlined"> 123</span>
                  </mat-icon>
                 <input
-                [(ngModel)]="employee.cpf"
-                required=""
-                [formControl]="cpf"
-                name="cpf"
+                 [(ngModel)]="resident.cpf"
+                 name="cpf"
                  matInput
-                 placeholder="000.000.000-00"
-                 mask="000.000.000-00"
+                 [disabled]="true"
+                 
                  >
                  
               </mat-form-field>
@@ -42,13 +37,12 @@
                     <span class="material-icons-outlined"> email</span>
                  </mat-icon>
                 <input
-                [(ngModel)]="employee.email"
-                 required
-                 [formControl]="email"
+                [(ngModel)]="resident.email"
                  name="email"
                  matInput 
-                 placeholder="fulano@seuemail.com"
-                 type="email">
+                 matInput
+                 [disabled]="true"
+                 >
               </mat-form-field>
 
               <mat-form-field appearance="fill">
@@ -57,29 +51,28 @@
                     <span class="material-icons-outlined"> lock</span>
                  </mat-icon>
                 <input
-                [(ngModel)]="employee.password"
-                required=""
-                [formControl]="password"
+                [(ngModel)]="resident.password"
                 name="password"
-                 matInput 
-                 placeholder="123.."
-                 type="password">
+                 type="password"
+                 matInput
+                 [disabled]="true"
+                 >
               </mat-form-field>
           
        
           
         <section class="section">
-            <mat-checkbox (click)="addProfile(0)"  class="margin" color="Primary-yellow">ADM</mat-checkbox>
-            <mat-checkbox (click)="addProfile(1)" [checked]="true"  class="margin" color="primary-yellow">Funcionario</mat-checkbox>
-            <mat-checkbox (click)="addProfile(2)"  class="margin" color="primary-yellow">Residente</mat-checkbox>
+            <mat-checkbox  [disabled]="true" class="margin" color="Primary-yellow">Admin</mat-checkbox>
+            <mat-checkbox  [disabled]="true" class="margin" color="primary-yellow">Funcionario</mat-checkbox>
+            <mat-checkbox  [disabled]="true" class="margin" color="primary-yellow">Residente</mat-checkbox>
           </section>
           <div class="buttons">
-            <button (click)="create()" mat-button color="primary" [disabled]="!fieldValidate()">Cadastrar</button>
+            <button (click)="delete()" mat-button color="primary" >Deletar</button>
             <button (click)="goBack()" mat-button color="warn">Voltar</button>
           </div>
           
     </form>
     <div class="aside">
-        <img src="../../../../assets/create.svg" alt="">
+        <img src="../../../../assets/update.svg" alt="">
     </div>
 </div>

@@ -2,7 +2,7 @@
 <div class="container">
     
     <form class="form">
-        <h1>Cadastrar Funcionário</h1>
+        <h1>Cadastrar Residente</h1>
 
             <mat-form-field appearance="fill">
               <mat-label>Nome</mat-label>
@@ -10,7 +10,7 @@
                 <span class="material-icons-outlined"> drive_file_rename_outline </span>
              </mat-icon>
               <input 
-              [(ngModel)]="employee.name"
+              [(ngModel)]="resident.name"
               required
               maxlength="50"
               [formControl]="name"
@@ -25,7 +25,7 @@
                     <span class="material-icons-outlined"> 123</span>
                  </mat-icon>
                 <input
-                [(ngModel)]="employee.cpf"
+                [(ngModel)]="resident.cpf"
                 required=""
                 [formControl]="cpf"
                 name="cpf"
@@ -42,7 +42,7 @@
                     <span class="material-icons-outlined"> email</span>
                  </mat-icon>
                 <input
-                [(ngModel)]="employee.email"
+                [(ngModel)]="resident.email"
                  required
                  [formControl]="email"
                  name="email"
@@ -57,7 +57,7 @@
                     <span class="material-icons-outlined"> lock</span>
                  </mat-icon>
                 <input
-                [(ngModel)]="employee.password"
+                [(ngModel)]="resident.password"
                 required=""
                 [formControl]="password"
                 name="password"
@@ -70,8 +70,8 @@
           
         <section class="section">
             <mat-checkbox (click)="addProfile(0)"  class="margin" color="Primary-yellow">ADM</mat-checkbox>
-            <mat-checkbox (click)="addProfile(1)" [checked]="true"  class="margin" color="primary-yellow">Funcionario</mat-checkbox>
-            <mat-checkbox (click)="addProfile(2)"  class="margin" color="primary-yellow">Residente</mat-checkbox>
+            <mat-checkbox (click)="addProfile(1)"   class="margin" color="primary-yellow">Funcionario</mat-checkbox>
+            <mat-checkbox (click)="addProfile(2)" [checked]="true" class="margin" color="primary-yellow">Residente</mat-checkbox>
           </section>
           <div class="buttons">
             <button (click)="create()" mat-button color="primary" [disabled]="!fieldValidate()">Cadastrar</button>

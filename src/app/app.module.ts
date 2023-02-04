@@ -1,3 +1,5 @@
+import { ResidentListComponent } from './pages/resident/resident.list/resident.list.component';
+import { ResidentCreateComponent } from './pages/resident/resident.create/resident.create.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -38,6 +40,9 @@ import { EmpoloyeeCreateComponent } from './pages/employee/empoloyee.create/empo
 import { NgxMaskModule } from 'ngx-mask';
 import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empoloyee.update.component';
 import { EmpoloyeeDeleteComponent } from './pages/employee/empoloyee.delete/empoloyee.delete.component';
+import { ResidentUpdateComponent } from './pages/resident/resident.update/resident.update.component';
+import { ResidentDeleteComponent } from './pages/resident/resident.delete/resident.delete.component';
+
 
 
 
@@ -55,7 +60,13 @@ import { EmpoloyeeDeleteComponent } from './pages/employee/empoloyee.delete/empo
     FooterComponent,
     EmpoloyeeCreateComponent,
     EmpoloyeeUpdateComponent,
-    EmpoloyeeDeleteComponent
+    EmpoloyeeDeleteComponent,
+    ResidentCreateComponent,
+    ResidentListComponent,
+    ResidentUpdateComponent,
+    ResidentDeleteComponent
+    
+
   ],
   imports: [
     BrowserModule,

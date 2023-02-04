@@ -1,0 +1,58 @@
+.container {
+    width: 80%; 
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid  #0c810c ;
+}
+
+
+
+.form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    box-sizing:content-box;
+    padding: 1rem;
+   
+
+   
+}
+
+
+h1 {
+    font-size: 2rem;
+    color: #0c810c;
+}
+mat-label {
+    color: #0c810c;
+}
+
+
+.aside {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  
+ 
+}
+
+.aside img {
+    width: 60%;
+}
+
+
+@media(max-width:900px) {
+  
+    img {
+      display: none;
+    }
+
+    .form {
+        width: 90%;
+    }
+  }
