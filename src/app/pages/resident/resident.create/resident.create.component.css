@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 1rem;
-    border: 1px solid  #0c810c ;
+    background-color: #DDA329;
 }
 
 
@@ -26,10 +26,10 @@
 
 h1 {
     font-size: 2rem;
-    color: #0c810c;
+    color: #69553B;
 }
 mat-label {
-    color: #0c810c;
+    color:#69553B;
 }
 
 
@@ -48,8 +48,8 @@ mat-label {
 
 @media(max-width:900px) {
   
-    img {
-      display: none;
+    .aside {
+        display: none;
     }
 
     .form {

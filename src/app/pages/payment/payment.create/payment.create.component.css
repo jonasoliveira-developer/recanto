@@ -1,6 +1,7 @@
 .container {
     width: 80%; 
     margin: 1rem auto;
+    padding: 0.5rem;
     margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
@@ -17,8 +18,7 @@
     justify-content: center;
     width: 50%;
     box-sizing:content-box;
-    padding: 1rem;
-   
+  
 
    
 }

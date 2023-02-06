@@ -1,14 +1,33 @@
-.card {
+.container {
     width: 70%;
-    margin:  auto;
+    height: 100%;
+    margin: 1rem auto;
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 1rem;
+   
+   
+}
+
+.card {
+    width: 90%;
+    margin: 3rem auto;
     padding: 1rem;
-    color: #5E440C;
-   background-color: rgb(252, 252, 122);
-    border-radius: 3rem;
+    color: green;
+    background-color:  #D6A34A;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1rem;
+   
 
 }
 
+mat-card-title {
+    margin-bottom: 1rem;
+}
 
-img {
-    height: 15rem;
+h1 {
+    color: green;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }

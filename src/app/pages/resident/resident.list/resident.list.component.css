@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
+    background-color: #DDA329;
+   
      
    
  }
@@ -28,35 +30,48 @@
 
 h1 {
     font-size: 2rem;
-    color:   #0c810c;
+    color: #69553B;
 }
 
 mat-label {
-    color: #0c810c;
+    
+    color:#69553B;
+}
+
+table {
+    background-color:  #DDA329;
+    color: #FFF;
+}
+
+mat-paginator {
+    background-color:  #DDA329;
+    color: #69553B;
 }
 
 mat-form-field {
     width: 100%;
-    background-color: #FFF;
+    background-color:#DDA329;
 }
 
-button {
+
+.header button {
     align-self: flex-end;
     width: 5rem;
     margin: 1rem;
+    background-color:#69553B;
    
 
 }
 
 .edit {
-    color: #FFF ;
+    color:  #C3B4A8 ;
     margin:.5rem .1rem 0 0;;
     background-color:#0c810c ;
     padding: .3rem;
     border-radius: 50%;
 }
 .delete {
-    color: #FFF ;
+    color:  #C3B4A8 ;
     
     background-color:rgb(219, 76, 76) ;
     padding: .3rem;
@@ -65,8 +80,8 @@ button {
 }
 
 .mat-mdc-raised-button.mat-unthemed {
-    --mdc-protected-button-container-color:  #0c810c;
-    --mdc-protected-button-label-text-color: #FFF;
+    --mdc-protected-button-container-color: #69553B;
+    --mdc-protected-button-label-text-color: #C3B4A8;
     font-weight: bold;
   }
 

@@ -43,7 +43,7 @@ password: FormControl = new FormControl(null, Validators.minLength(3))
   create():void {
     this.service.create(this.resident).subscribe(respose => {
       this.router.navigate(['residents'])
-      this.toast.success("Funcionário cadastrado com sucesso!");
+      this.toast.success("Residente cadastrado com sucesso!");
     }, ex => {
       if(ex.error.errors) {
         ex.error.errors.map(x => this.toast.error(x.message))

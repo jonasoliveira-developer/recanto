@@ -1,17 +1,20 @@
 .container {
  width: 100%;
- padding: 1.5rem 0;
  display: flex;
+ margin-top: 1rem;
  justify-content: center;
- background-color: green;
- 
     
 }
 
 
 h1 {
-    width: 70%;
-    color: #fcfc7a;
+    width: 50%;
+    margin-top: .5rem;
+    color:#A29B65;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 1em;
 }

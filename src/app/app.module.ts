@@ -42,6 +42,9 @@ import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empo
 import { EmpoloyeeDeleteComponent } from './pages/employee/empoloyee.delete/empoloyee.delete.component';
 import { ResidentUpdateComponent } from './pages/resident/resident.update/resident.update.component';
 import { ResidentDeleteComponent } from './pages/resident/resident.delete/resident.delete.component';
+import { PaymentListComponent } from './pages/payment/payment.list/payment.list.component';
+import { PaymentCreateComponent } from './pages/payment/payment.create/payment.create.component';
+import { PaymentUpdadeComponent } from './pages/payment/payment.updade/payment.updade.component';
 
 
 
@@ -64,7 +67,10 @@ import { ResidentDeleteComponent } from './pages/resident/resident.delete/reside
     ResidentCreateComponent,
     ResidentListComponent,
     ResidentUpdateComponent,
-    ResidentDeleteComponent
+    ResidentDeleteComponent,
+    PaymentListComponent,
+    PaymentCreateComponent,
+    PaymentUpdadeComponent
     
 
   ],

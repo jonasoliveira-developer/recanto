@@ -56,22 +56,24 @@ mat-form-field {
 
 .header button {
     align-self: flex-end;
-    width: 5rem;
+    width: 10rem;
+    padding: 1.5rem;
     margin: 1rem;
     background-color:#69553B;
+    color: #FFF;
    
 
 }
 
 .edit {
-    color:  #C3B4A8 ;
+    color:  #FFF ;
     margin:.5rem .1rem 0 0;;
     background-color:#0c810c ;
     padding: .3rem;
     border-radius: 50%;
 }
 .delete {
-    color:  #C3B4A8 ;
+    color:  #FFF ;
     
     background-color:rgb(219, 76, 76) ;
     padding: .3rem;

@@ -1,12 +1,11 @@
 export interface IPayment {
     id?:any;
     title:string;
-    datePayment?:string;
-    situation:string[];
-    finishPayment?:string;
+    datePayment?:any;
+    situation:any;
+    finishPayment?:any;
     cash:number;
     person:any;
-    personName:string
-
-    
+    personName?:string
+ 
 }

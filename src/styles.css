@@ -1,16 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden; }
 
 
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
-  border-bottom-color:#0c810c;
+  border-bottom-color:#69553B;
 }
 
 .mdc-text-field--filled .mdc-line-ripple::after {
-  border-bottom-color: var(--mdc-theme-primary,#0c810c);
+  border-bottom-color: var(--mdc-theme-primary,#69553B);
 }
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: #FFF;
@@ -23,7 +25,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: h
 }
 
 .mdc-data-table__pagination-total, .mdc-data-table__pagination-rows-per-page-label, .mdc-data-table__cell {
-  color:#0c810c;
+  color:#69553B;
   font-size: 1rem;
 }
 
@@ -32,11 +34,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: h
   }
 
 .mat-mdc-table {
-  background: #FFF;
+  background:#69553B;
   
 }
 
 .mdc-data-table__header-cell {
-  color: rgba(0, 0, 0, 0.87);
+  color: #69553B;
 }
+
+.mat-mdc-radio-button.mat-accent {
+  --mdc-radio-disabled-selected-icon-color: #000;
+  --mdc-radio-disabled-unselected-icon-color: #000;
+  --mdc-radio-unselected-focus-icon-color: #212121;
+  --mdc-radio-unselected-hover-icon-color: #212121;
+  --mdc-radio-unselected-icon-color: rgba(0, 0, 0, 0.54);
+  --mdc-radio-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54);
+  --mdc-radio-selected-focus-icon-color: #69553B;
+  --mdc-radio-selected-hover-icon-color: #69553B;
+  --mdc-radio-selected-icon-color: #69553B;
+  --mdc-radio-selected-pressed-icon-color: #69553B;
+  --mat-mdc-radio-ripple-color: #000;
+  --mat-mdc-radio-checked-ripple-color: #69553B;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+ background-color: #DDA329;
+}
+
 

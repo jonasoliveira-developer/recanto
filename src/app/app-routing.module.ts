@@ -1,3 +1,5 @@
+import { PaymentUpdadeComponent } from './pages/payment/payment.updade/payment.updade.component';
+import { PaymentCreateComponent } from './pages/payment/payment.create/payment.create.component';
 import { EmployeeListComponent } from './pages/employee/employee.list/employee.list.component';
 import { EmpoloyeeUpdateComponent } from './pages/employee/empoloyee.update/empoloyee.update.component';
 import { EmpoloyeeDeleteComponent } from './pages/employee/empoloyee.delete/empoloyee.delete.component';
@@ -16,6 +18,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './shared/login/login.component';
+import { PaymentListComponent } from './pages/payment/payment.list/payment.list.component';
 
 
 
@@ -34,6 +37,10 @@ const routes: Routes = [
     {path:'residents/create', component: ResidentCreateComponent},
     {path:'residents/update/:id', component: ResidentUpdateComponent},
     {path:'residents/delete/:id', component: ResidentDeleteComponent},
+
+    {path:'payments', component: PaymentListComponent},
+    {path:'payments/create', component: PaymentCreateComponent},
+    {path:'payments/update/:id', component: PaymentUpdadeComponent},
    
   ]},
   
