@@ -50,6 +50,10 @@ import { AnnoucementsListComponent } from './pages/annoucements/annoucements.lis
 import { AnnoucementsCreateComponent } from './pages/annoucements/annoucements.create/annoucements.create.component';
 import { AnnoucementsUpdateComponent } from './pages/annoucements/annoucements.update/annoucements.update.component';
 import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.delete/annoucements.delete.component';
+import { OccurrenceListComponent } from './pages/occurrence/occurrence.list/occurrence.list.component';
+import { OccurrenceCreateComponent } from './pages/occurrence/occurrence.create/occurrence.create.component';
+import { OccurrenceUpdateComponent } from './pages/occurrence/occurrence.update/occurrence.update.component';
+import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occurrence.read.component';
 
 
 
@@ -80,7 +84,11 @@ import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.d
     AnnoucementsListComponent,
     AnnoucementsCreateComponent,
     AnnoucementsUpdateComponent,
-    AnnoucementsDeleteComponent
+    AnnoucementsDeleteComponent,
+    OccurrenceListComponent,
+    OccurrenceCreateComponent,
+    OccurrenceUpdateComponent,
+    OccurrenceReadComponent
     
 
   ],

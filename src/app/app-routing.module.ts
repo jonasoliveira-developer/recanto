@@ -1,3 +1,5 @@
+import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occurrence.read.component';
+import { OccurrenceCreateComponent } from './pages/occurrence/occurrence.create/occurrence.create.component';
 import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.delete/annoucements.delete.component';
 import { AnnoucementsCreateComponent } from './pages/annoucements/annoucements.create/annoucements.create.component';
 import { PaymentReadComponent } from './pages/payment/payment.read/payment.read.component';
@@ -24,6 +26,8 @@ import { LoginComponent } from './shared/login/login.component';
 import { PaymentListComponent } from './pages/payment/payment.list/payment.list.component';
 import { AnnoucementsListComponent } from './pages/annoucements/annoucements.list/annoucements.list.component';
 import { AnnoucementsUpdateComponent } from './pages/annoucements/annoucements.update/annoucements.update.component';
+import { OccurrenceListComponent } from './pages/occurrence/occurrence.list/occurrence.list.component';
+import { OccurrenceUpdateComponent } from './pages/occurrence/occurrence.update/occurrence.update.component';
 
 
 
@@ -52,6 +56,11 @@ const routes: Routes = [
     {path:'annoucements/create', component: AnnoucementsCreateComponent},
     {path:'annoucements/update/:id', component: AnnoucementsUpdateComponent},
     {path:'annoucements/delete/:id', component: AnnoucementsDeleteComponent},
+
+    {path: 'occurrences', component: OccurrenceListComponent},
+    {path: 'occurrences/create', component: OccurrenceCreateComponent},
+    {path: 'occurrences/update/:id', component: OccurrenceUpdateComponent},
+    {path: 'occurrences/read/:id', component: OccurrenceReadComponent},
    
   ]},
   

@@ -2,8 +2,8 @@
 
 <div class="mat-elevation-z8 container">
     <div class="header">
-      <h1>Listando Pagamentos</h1>
-    <button routerLink="create" mat-raised-button >Novo pagamento</button>
+      <h1>Listando Ocorrências</h1>
+    <button routerLink="create" mat-raised-button >Nova Ocorrência</button>
     </div>
     <mat-radio-group >
         <mat-radio-button (click)="orderBySituation(0)" value="0">ABERTO</mat-radio-button>
@@ -31,15 +31,10 @@
     
         
         <ng-container matColumnDef="personName">
-          <th mat-header-cell *matHeaderCellDef> Pagador </th>
+          <th mat-header-cell *matHeaderCellDef> Relator </th>
           <td mat-cell *matCellDef="let element"> {{element.personName}} </td>
         </ng-container>
     
-       
-        <ng-container matColumnDef="value">
-          <th mat-header-cell *matHeaderCellDef> Valor </th>
-          <td mat-cell *matCellDef="let element">R$ {{element.cash}} </td>
-        </ng-container>
 
         <ng-container matColumnDef="situation">
             <th mat-header-cell *matHeaderCellDef> Situação </th>
@@ -63,7 +58,7 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
     
-      <mat-paginator [pageSizeOptions]="[5, 10, 20, page]"
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
                      showFirstLastButtons
                      aria-label="Select page of periodic elements">
       </mat-paginator>
@@ -71,3 +66,5 @@
   
     
   
+
+    

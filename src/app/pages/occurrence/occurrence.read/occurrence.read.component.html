@@ -1,0 +1,75 @@
+<div class="container">
+    
+    <form class="form">
+        <h1>Detalhe de Ocorrência</h1>
+        
+            <mat-form-field class="full-width">
+                <mat-label>TITULO</mat-label>
+              <input
+              [disabled]="true"
+              [(ngModel)]="occurrence.title"
+              name="title"
+               matInput
+              >
+            </mat-form-field>
+
+
+            <mat-form-field class="full-width">
+                <mat-label>DATA DE ABERTURA</mat-label>
+                <input
+                [(ngModel)]="occurrence.openDate"
+                name="datePayment"
+                 matInput
+                 [disabled]="true"
+                >
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>DESCRIÇÃO</mat-label>
+              <input
+              [disabled]="true"
+              [(ngModel)]="occurrence.description"
+              name="description"
+               matInput
+              >
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" >
+                
+                <mat-label>SITUAÇÃO</mat-label>
+                <input
+                [(ngModel)]="occurrence.situation"
+                name="situation"
+                matInput
+                [disabled]="true"
+                >
+             
+             </mat-form-field>
+
+             <mat-form-field class="full-width">
+                <mat-label>DATA DE FECHAMENTO</mat-label>
+                <input
+                [(ngModel)]="occurrence.finishDate"
+                name="finishDate"
+                 matInput
+                 [disabled]="true"
+                >
+              </mat-form-field>
+
+             <mat-form-field appearance="fill" >
+                <mat-label>NOME</mat-label>
+                <input
+                 name="personName"
+                 [(ngModel)]="occurrence.personName"
+                 matInput
+                 [disabled]="true"
+                 
+                  >
+             </mat-form-field>
+
+             <div class="buttons">
+                <button (click)="goBack()" mat-button color="primary">Voltar</button>
+              </div>
+    </form>
+   
+</div>

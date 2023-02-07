@@ -10,6 +10,7 @@ import { PaymentService } from 'src/app/services/payment.service';
   styleUrls: ['./payment.list.component.css']
 })
 export class PaymentListComponent implements OnInit{
+ page:number = 0
   ELEMENT_DATA: IPayment[] = [];
   FILTERED_DATA: IPayment[] = [];
   
@@ -32,6 +33,7 @@ export class PaymentListComponent implements OnInit{
         this.ELEMENT_DATA = response;
         this.dataSource = new MatTableDataSource<IPayment>(response);
         this.dataSource.paginator = this.paginator;
+        this.page = response.length
       })
      }
 
