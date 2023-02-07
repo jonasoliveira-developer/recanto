@@ -21,6 +21,7 @@ export class AuthService {
 
   successFullLogin(authToken: string) {
     localStorage.setItem('token', authToken)
+   
   }
 
   isAuthenticated() {

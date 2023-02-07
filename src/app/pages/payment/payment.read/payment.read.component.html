@@ -1,0 +1,74 @@
+<div class="container">
+    
+    <form class="form">
+        <h1>Detalhe de Pagamento</h1>
+        
+            <mat-form-field class="full-width">
+                <mat-label>TITULO</mat-label>
+              <input
+              [disabled]="true"
+              [(ngModel)]="payment.title"
+              name="title"
+               matInput
+              >
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>VALOR</mat-label>
+                <input
+                [(ngModel)]="payment.cash"
+                name="payment"
+                matInput
+                [disabled]="true"
+                 >
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>DATA DE ABERTURA</mat-label>
+                <input
+                [(ngModel)]="payment.datePayment"
+                name="datePayment"
+                 matInput
+                 [disabled]="true"
+                >
+              </mat-form-field>
+
+            <mat-form-field appearance="fill" >
+                
+                <mat-label>SITUAÇÃO</mat-label>
+                <input
+                [(ngModel)]="payment.situation"
+                name="situation"
+                matInput
+                [disabled]="true"
+                >
+             
+             </mat-form-field>
+
+             <mat-form-field class="full-width">
+                <mat-label>DATA DE FECHAMENTO</mat-label>
+                <input
+                [(ngModel)]="payment.finishPayment"
+                name="finishPayment"
+                 matInput
+                 [disabled]="true"
+                >
+              </mat-form-field>
+
+             <mat-form-field appearance="fill" >
+                <mat-label>NOME</mat-label>
+                <input
+                 name="personName"
+                 [(ngModel)]="payment.personName"
+                 matInput
+                 [disabled]="true"
+                 
+                  >
+             </mat-form-field>
+
+             <div class="buttons">
+                <button (click)="goBack()" mat-button color="primary">Voltar</button>
+              </div>
+    </form>
+   
+</div>

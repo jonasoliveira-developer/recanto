@@ -54,13 +54,22 @@ resident: FormControl = new FormControl(null, Validators.required);
     this.paymentService.create(this.payment).subscribe(response => {
         this.router.navigate(['payments'])
         this.toast.success("Pagamento criado com sucesso");
-        console.log(this.payment)
 
 
     }, ex => {
       this.toast.error(ex.error.error)
       
     })
+   }
+
+   createGroup():void {
+    this.residents.map(resident => {
+        this.payment.person = resident.id;
+        this.paymentService.create(this.payment).subscribe(response => { }, 
+          ex => {this.toast.error(ex.error.error)})
+    })
+    this.router.navigate(['payments'])
+    this.toast.success("Pagamento criado com sucesso");
    }
 
    goBack():void {

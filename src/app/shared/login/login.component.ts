@@ -1,12 +1,12 @@
-import { Router } from '@angular/router';
-import { AuthService } from './../../services/auth.service';
-import { FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import {ThemePalette} from '@angular/material/core';
-
+import { FormControl, Validators } from '@angular/forms';
+import { ThemePalette } from '@angular/material/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 import { ICredentials } from './../../models/credentials';
-import { ToastrService } from 'ngx-toastr';
+import { AuthService } from './../../services/auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -31,7 +31,8 @@ password = new FormControl(null, Validators.minLength(3));
   constructor(
     private tost: ToastrService,
     private service: AuthService,
-    private router: Router
+    private router: Router,
+ 
     ) {}
 
   ngOnInit(): void {
@@ -40,13 +41,20 @@ password = new FormControl(null, Validators.minLength(3));
 
   logar():void {
     this.service.authenticate(this.creds).subscribe(response => {
-       this.service.successFullLogin(response.headers.get('Authorization').substring(7))
+      let token =  response.headers.get('Authorization').split(" ")
+       this.service.successFullLogin(token[1]);
+       localStorage.setItem('id', token[2]);
+       localStorage.setItem('user', token[3]);
+       localStorage.setItem('roles', token[4].replace(',', '').slice(1));
+       localStorage.getItem('roles');
        this.router.navigate(['home']);
+        console.log(token[1])
     }, () => {
       this.tost.error('Usuário e/ou senha inválidos!!')
     }) 
   }
 
+ 
   fieldValidator(): boolean {
     return this.email.valid && this.password.valid
   }

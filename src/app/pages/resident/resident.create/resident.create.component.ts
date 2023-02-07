@@ -20,6 +20,8 @@ resident: IResident = {
   password:'',
   profiles: [],
   date:''
+  //endereço
+  //telefone
   
   
 

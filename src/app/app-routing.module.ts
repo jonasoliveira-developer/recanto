@@ -1,3 +1,6 @@
+import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.delete/annoucements.delete.component';
+import { AnnoucementsCreateComponent } from './pages/annoucements/annoucements.create/annoucements.create.component';
+import { PaymentReadComponent } from './pages/payment/payment.read/payment.read.component';
 import { PaymentUpdadeComponent } from './pages/payment/payment.updade/payment.updade.component';
 import { PaymentCreateComponent } from './pages/payment/payment.create/payment.create.component';
 import { EmployeeListComponent } from './pages/employee/employee.list/employee.list.component';
@@ -19,6 +22,8 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './shared/login/login.component';
 import { PaymentListComponent } from './pages/payment/payment.list/payment.list.component';
+import { AnnoucementsListComponent } from './pages/annoucements/annoucements.list/annoucements.list.component';
+import { AnnoucementsUpdateComponent } from './pages/annoucements/annoucements.update/annoucements.update.component';
 
 
 
@@ -41,6 +46,12 @@ const routes: Routes = [
     {path:'payments', component: PaymentListComponent},
     {path:'payments/create', component: PaymentCreateComponent},
     {path:'payments/update/:id', component: PaymentUpdadeComponent},
+    {path:'payments/read/:id', component: PaymentReadComponent},
+
+    {path:'annoucements', component: AnnoucementsListComponent},
+    {path:'annoucements/create', component: AnnoucementsCreateComponent},
+    {path:'annoucements/update/:id', component: AnnoucementsUpdateComponent},
+    {path:'annoucements/delete/:id', component: AnnoucementsDeleteComponent},
    
   ]},
   

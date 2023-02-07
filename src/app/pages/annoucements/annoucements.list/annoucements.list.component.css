@@ -10,7 +10,7 @@
     background-color: #DDA329;
    
      
-    
+   
  }
 
  @media(max-width:756px) {
@@ -32,6 +32,7 @@ h1 {
     font-size: 2rem;
     color: #69553B;
 }
+
 
 mat-label {
     
@@ -84,5 +85,3 @@ mat-form-field {
     --mdc-protected-button-label-text-color: #C3B4A8;
     font-weight: bold;
   }
-
-

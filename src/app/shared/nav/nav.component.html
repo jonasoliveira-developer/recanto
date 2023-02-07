@@ -9,7 +9,7 @@
               </div>
             </a>
 
-            <a mat-list-item routerLink="/">
+            <a mat-list-item href="annoucements">
               <div class="list-item--content">
                 <i class="material-icons">announcement</i>
                 <span>Avisos</span> 
@@ -69,11 +69,13 @@
     </mat-drawer>
    
     <div class="sidenav-content">
-
+   
       <button class="menu" (click)="drawer.toggle()" mat-icon-button>
         <mat-icon >menu</mat-icon>
       </button>
+      <p>Olá, {{name}}</p>
       <app-header></app-header>
+    
       <div> 
         <router-outlet></router-outlet>
       </div>

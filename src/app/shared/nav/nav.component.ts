@@ -9,15 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit{
-
+  name:string  = '';
   constructor(
     private router: Router,
     private auth: AuthService,
     private tost: ToastrService
+    
    ) {}
 
   ngOnInit(): void {
-   // this.router.navigate(['login'])
+    this.name = localStorage.getItem('user');
+   
   }
 
   logout():void {

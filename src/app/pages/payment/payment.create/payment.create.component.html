@@ -52,13 +52,15 @@
                         <input matInput (keyup)="applyFilter($event)" placeholder="Buscar pagamento" #input>
                       </mat-form-field>
                   <mat-option *ngFor="let resident of residents"
-                     value="{{resident.id}}">{{resident.name}}</mat-option>
+                     value="{{resident.id}}">{{resident.name}}
+                    </mat-option>
                 </mat-select>
              
              </mat-form-field>
 
              <div class="buttons">
                 <button [disabled]=""  mat-button color="primary" (click)="create()">Criar</button>
+                <button [disabled]=""  mat-button color="primary" (click)="createGroup()">Gerar pagamento</button>
                 <button (click)="goBack()" mat-button color="warn">Voltar</button>
               </div>
     </form>

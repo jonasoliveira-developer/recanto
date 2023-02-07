@@ -1,5 +1,6 @@
 .container {
     height: 100%;
+    padding: 0 1rem 0 1rem;
    background-color: #f2f2f2;
     
    
@@ -8,7 +9,7 @@
 
 .sidenav {
    width: 13rem;
-  background-color:#A29B65;
+  background-color: #DDA329;
 
 }
 
@@ -21,14 +22,20 @@
     margin-right: .6rem;
 }
 .material-icons, span {
-    color:#f2f2f2;
+    color:#FFF;
 }
 .menu {
     position: absolute;
-    margin: .5rem;
-    background-color:#A29B65;
+    background-color:green;
    
+}
 
+p {
+    text-align: end;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #DDA329;
 }
 
 
@@ -42,7 +49,6 @@ img {
 .sidenav-content {
     height: 100%;
 }
-
 
 
 

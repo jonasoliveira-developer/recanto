@@ -1,0 +1,51 @@
+
+<div class="container">
+    
+    <form class="form">
+        <h1>Cadastrar Aviso</h1>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Titulo</mat-label>
+              <mat-icon matSuffix>
+                <span class="material-icons-outlined"> drive_file_rename_outline </span>
+             </mat-icon>
+              <input 
+              [(ngModel)]="annoucement.title"
+              required
+              maxlength="50"
+              [formControl]="title"
+               name="name"
+               matInput 
+               placeholder="Fulano de tal">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined"> 123</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="annoucement.description"
+                required=""
+                [formControl]="description"
+                name="description"
+                 matInput
+                 placeholder="Qual assunto deseja falar?"
+                
+                 >
+                 
+              </mat-form-field>
+
+            
+          
+         <div class="buttons">
+            <button (click)="create()" mat-button color="primary" [disabled]="!fieldValidate()">Cadastrar</button>
+            <button (click)="goBack()" mat-button color="warn">Voltar</button>
+          </div>
+          
+    </form>
+    <div class="aside">
+        <img src="../../../../assets/create.svg" alt="">
+    </div>
+</div>
+

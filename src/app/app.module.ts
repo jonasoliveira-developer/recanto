@@ -45,6 +45,11 @@ import { ResidentDeleteComponent } from './pages/resident/resident.delete/reside
 import { PaymentListComponent } from './pages/payment/payment.list/payment.list.component';
 import { PaymentCreateComponent } from './pages/payment/payment.create/payment.create.component';
 import { PaymentUpdadeComponent } from './pages/payment/payment.updade/payment.updade.component';
+import { PaymentReadComponent } from './pages/payment/payment.read/payment.read.component';
+import { AnnoucementsListComponent } from './pages/annoucements/annoucements.list/annoucements.list.component';
+import { AnnoucementsCreateComponent } from './pages/annoucements/annoucements.create/annoucements.create.component';
+import { AnnoucementsUpdateComponent } from './pages/annoucements/annoucements.update/annoucements.update.component';
+import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.delete/annoucements.delete.component';
 
 
 
@@ -70,7 +75,12 @@ import { PaymentUpdadeComponent } from './pages/payment/payment.updade/payment.u
     ResidentDeleteComponent,
     PaymentListComponent,
     PaymentCreateComponent,
-    PaymentUpdadeComponent
+    PaymentUpdadeComponent,
+    PaymentReadComponent,
+    AnnoucementsListComponent,
+    AnnoucementsCreateComponent,
+    AnnoucementsUpdateComponent,
+    AnnoucementsDeleteComponent
     
 
   ],
