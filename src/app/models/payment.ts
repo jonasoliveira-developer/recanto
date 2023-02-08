@@ -3,6 +3,7 @@ export interface IPayment {
     title:string;
     datePayment?:any;
     situation:any;
+    modePayment?:any;
     finishPayment?:any;
     cash:number;
     person:any;

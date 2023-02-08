@@ -18,6 +18,7 @@ export class PaymentUpdadeComponent implements OnInit{
   payment:IPayment = {
     title:'',
     situation:'',
+    modePayment:'',
     cash:0,
     person:'',
     personName:''
@@ -26,6 +27,7 @@ export class PaymentUpdadeComponent implements OnInit{
 
   title: FormControl = new FormControl(null, Validators.required);
   situation : FormControl = new FormControl(null, Validators.required);
+  modePayment : FormControl = new FormControl(null, Validators.required);
   cash: FormControl = new FormControl(null, Validators.required);
   personName: FormControl = new FormControl(null, Validators.required);
   
@@ -60,6 +62,17 @@ export class PaymentUpdadeComponent implements OnInit{
 
      situationReturn(situatin:any): string {
       return situatin == 0 ? 'ABERTO': 'ENCERRADO';
+     }
+
+     returnModePayment(mode:any): string {
+      if(mode == '0') {
+        return 'DINHEIRO'
+      }
+      if(mode == '1') {
+        return 'CARTÃO'
+      }else {
+        return 'PIX'
+      }
      }
   
      update():void {

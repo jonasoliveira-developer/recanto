@@ -1,14 +1,17 @@
 
 
-<div class="mat-elevation-z8 container">
+<div class="mat-elevation-z8 container" id="content" #content>  
+  <button class="print" routerLink="report">
+      <mat-icon>print</mat-icon>
+   </button> 
     <div class="header">
       <h1>Listando Pagamentos</h1>
-    <button routerLink="create" mat-raised-button >Novo pagamento</button>
+     <button routerLink="create" mat-raised-button >Novo pagamento</button>
     </div>
     <mat-radio-group >
         <mat-radio-button (click)="orderBySituation(0)" value="0">ABERTO</mat-radio-button>
         <mat-radio-button  (click)="orderBySituation(1)" value="1">ENCERRADO</mat-radio-button>
-      </mat-radio-group>    
+      </mat-radio-group> 
     
    
     <mat-form-field>
@@ -45,6 +48,11 @@
             <th mat-header-cell *matHeaderCellDef> Situação </th>
             <td mat-cell *matCellDef="let element"> {{situationReturn(element.situation)}} </td>
         </ng-container>
+
+        <ng-container matColumnDef="modePayment">
+          <th mat-header-cell *matHeaderCellDef> Forma de Pagamento </th>
+          <td mat-cell *matCellDef="let element"> {{modePayment(element.modePayment)}} </td>
+      </ng-container>
   
         <ng-container matColumnDef="acctions">
           <th mat-header-cell *matHeaderCellDef> Ações </th>

@@ -1,3 +1,4 @@
+import { PaymentReportComponent } from './pages/payment.report/payment.report.component';
 import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occurrence.read.component';
 import { OccurrenceCreateComponent } from './pages/occurrence/occurrence.create/occurrence.create.component';
 import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.delete/annoucements.delete.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
     {path:'residents/delete/:id', component: ResidentDeleteComponent},
 
     {path:'payments', component: PaymentListComponent},
+    {path:'payments/report', component: PaymentReportComponent},
     {path:'payments/create', component: PaymentCreateComponent},
     {path:'payments/update/:id', component: PaymentUpdadeComponent},
     {path:'payments/read/:id', component: PaymentReadComponent},
@@ -61,6 +63,7 @@ const routes: Routes = [
     {path: 'occurrences/create', component: OccurrenceCreateComponent},
     {path: 'occurrences/update/:id', component: OccurrenceUpdateComponent},
     {path: 'occurrences/read/:id', component: OccurrenceReadComponent},
+   
    
   ]},
   

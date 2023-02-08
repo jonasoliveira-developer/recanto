@@ -35,6 +35,21 @@
              </mat-form-field>
 
              <mat-form-field appearance="fill" >
+              <mat-label>{{returnModePayment(payment.modePayment)}}</mat-label>
+              <mat-select
+              [formControl]="modePayment"
+              required
+              [(ngModel)]="payment.modePayment"
+              name="modePayment"
+              >
+                <mat-option   value="0">DINHEIRO</mat-option>
+                <mat-option   value="1">CARTÃO</mat-option>
+                <mat-option   value="2">PIX</mat-option>
+              </mat-select>
+           
+             </mat-form-field>
+
+             <mat-form-field appearance="fill" >
                 <mat-label>{{payment.personName}}</mat-label>
                 <mat-select
                  name="person"

@@ -1,5 +1,5 @@
 .container {
-    width: 70%;
+    width: 80%;
     min-width: 550px;
     height: 100%;
     padding:.5rem;
@@ -79,6 +79,20 @@ mat-form-field {
     padding: .3rem;
     margin:.5rem .1rem 0 0;
     border-radius: 50%;
+}
+
+.print {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #69553B;
+    outline: none;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
 }
 
 .mat-mdc-raised-button.mat-unthemed {

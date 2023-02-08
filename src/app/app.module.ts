@@ -54,6 +54,7 @@ import { OccurrenceListComponent } from './pages/occurrence/occurrence.list/occu
 import { OccurrenceCreateComponent } from './pages/occurrence/occurrence.create/occurrence.create.component';
 import { OccurrenceUpdateComponent } from './pages/occurrence/occurrence.update/occurrence.update.component';
 import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occurrence.read.component';
+import { PaymentReportComponent } from './pages/payment.report/payment.report.component';
 
 
 
@@ -88,7 +89,8 @@ import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occu
     OccurrenceListComponent,
     OccurrenceCreateComponent,
     OccurrenceUpdateComponent,
-    OccurrenceReadComponent
+    OccurrenceReadComponent,
+    PaymentReportComponent
     
 
   ],
@@ -118,7 +120,7 @@ import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occu
     MatListModule,
     MatCardModule,
     ToastrModule.forRoot({timeOut:4000,closeButton:true, progressBar:true}),
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
     
   ],
   providers: [AuthInterceptorProvider],

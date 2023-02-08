@@ -1,0 +1,36 @@
+
+
+<div class="wrapper" >
+  <button class="print" routerLink="report" (click)="printPaymentPDF()">
+    <mat-icon>print</mat-icon>
+  </button> 
+ <div class="container" id="content" #content >
+  <h1>Relatório de pagamento </h1> 
+  <p>Associação Comunitária Dos Moradores Do Loteamento Recanto De Itapuã</p> 
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>Id</th> 
+        <th >Titulo</th>
+        <th >Pagador</th>
+        <th >Valor</th>
+        <th >Situação</th>
+        <th >Forma</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let element of ELEMENT_DATA">
+      <tr>
+        <td>{{element.id}}</td>
+        <td>{{element.title}}</td>
+        <td>{{element.personName}}</td>
+        <td>{{element.cash}}</td>
+        <td>{{situationReturn(element.situation)}}</td>
+        <td>{{modePayment(element.modePayment)}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+ </div>
+
+</div>

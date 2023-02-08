@@ -1,0 +1,59 @@
+.wrapper {
+    width: 50%;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border:1px solid #69553B;
+    border-radius: 1rem;
+}
+
+.container {
+   width: 600px;
+  
+}
+table {
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 5px;
+
+}
+h1, p {
+    color: #69553B;
+    font-size: 16px;
+    text-align: center;
+}
+h4 {
+    color: green;
+    font-size: 10px;
+}
+
+th {
+    background-color: #CCC;
+}
+
+td {
+    text-align:center;
+    flex: 1;
+    background-color: #e7e6e6;
+
+}
+.print {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #69553B;
+    outline: none;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+

@@ -4,6 +4,7 @@ import { IPayment } from './../../../models/payment';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PaymentService } from 'src/app/services/payment.service';
 
+
 @Component({
   selector: 'app-payment.list',
   templateUrl: './payment.list.component.html',
@@ -15,10 +16,11 @@ export class PaymentListComponent implements OnInit{
   FILTERED_DATA: IPayment[] = [];
   
   
-  displayedColumns: string[] = ['id', 'title', 'personName', 'value','situation', 'acctions'];
+  displayedColumns: string[] = ['id', 'title', 'personName', 'value','situation','modePayment', 'acctions'];
   dataSource = new MatTableDataSource<IPayment>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+ 
 
     constructor(private service: PaymentService) {}
 
@@ -41,6 +43,17 @@ export class PaymentListComponent implements OnInit{
       return situatin == 0 ? 'ABERTO': 'ENCERRADO';
      }
 
+     modePayment(mode:any): string {
+      if(mode == '0') {
+        return 'DINHEIRO'
+      }
+      if(mode == '1') {
+        return 'CARTÃO'
+      }else {
+        return 'PIX'
+      }
+     }
+
      orderBySituation(situatin:any): void {
       let list: IPayment[] = [];
        this.ELEMENT_DATA.map(payment => {
@@ -52,7 +65,8 @@ export class PaymentListComponent implements OnInit{
       this.dataSource.paginator = this.paginator;
 
      }
-    
+
+
 
     applyFilter(event: Event) {
       const filterValue = (event.target as HTMLInputElement).value;

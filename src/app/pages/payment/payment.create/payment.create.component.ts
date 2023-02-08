@@ -18,6 +18,7 @@ export class PaymentCreateComponent implements OnInit {
 payment:IPayment = {
   title:'',
   situation:'',
+  modePayment:'',
   cash:0,
   person:'',
 
@@ -30,6 +31,7 @@ title: FormControl = new FormControl(null, Validators.required);
 cash: FormControl = new FormControl(null, Validators.required);
 situation: FormControl = new FormControl(null, Validators.required);
 resident: FormControl = new FormControl(null, Validators.required);
+modePayment: FormControl = new FormControl(null, Validators.required);
 
 
 
@@ -47,6 +49,7 @@ resident: FormControl = new FormControl(null, Validators.required);
    findAllResidents():void {
     this.residentService.findAll().subscribe(response => {
       this.residents = response;
+      console.log(response)
     })
    }
 
