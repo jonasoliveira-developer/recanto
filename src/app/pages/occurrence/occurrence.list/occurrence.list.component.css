@@ -1,24 +1,19 @@
 .container {
-    width: 70%;
-    min-width: 550px;
-    height: 100%;
-    padding:.5rem;
-    margin:  2rem auto;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    background-color: #DDA329;
-   
+  width: 90%;
+  height: 100%;
+  padding:.5rem;
+  margin:  2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  background-color: #DDA329;
      
    
  }
 
- @media(max-width:756px) {
-    .container {
-        width: 95%;
-       
-    }
- }
 
  .header {
     display: flex;
@@ -49,8 +44,8 @@ mat-paginator {
 }
 
 mat-form-field {
-    width: 100%;
-    background-color:#DDA329;
+  width: 50%;
+  background-color:#DDA329;
 }
 
 
@@ -88,3 +83,106 @@ mat-form-field {
   }
 
 
+
+
+
+
+  .card{
+    margin: 1rem;
+    width: 20rem;
+    border-radius: 1rem;
+    padding: .3rem;
+  }
+
+  .card h1{
+    color:#FFF;
+    text-align: center;
+    height: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color:  rgb(218, 91, 91);
+    border-radius: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+ .content span {
+    color: #69553B;
+ }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+   .look{
+        
+        color: #DB1B1B;
+  }
+  .eyes{
+        
+    color: #ccc;
+}
+
+  .update {
+    color: rgb(59, 95, 180);
+  }
+  .add {
+    color: #0c810c;
+  }
+
+  .authorite{
+    display: inline-block;
+    padding: .2rem;
+    margin-left: .3rem;
+    margin-bottom: .5rem;
+    border-radius: .3rem;
+    color: #FFF;
+
+  }
+
+  .situation {
+    font-weight: bold;
+    color: #69553B;
+  }
+
+ 
+
+
+  @media(max-width:756px) {
+    .container {
+        width: 95%;
+       
+    }
+    .header {
+      margin-top: 1rem;
+     
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+     
+    }
+    .header button {
+      width: 85%;
+      align-self: center;
+      
+  
+    }
+    h1 {
+      text-align: center;
+    }
+    mat-form-field {
+      width: 90%;
+    }
+ 
+  }

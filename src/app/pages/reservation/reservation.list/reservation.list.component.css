@@ -1,0 +1,186 @@
+.container {
+    width: 90%;
+    height: 100%;
+    padding:.5rem;
+    margin:  2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    background-color: #DDA329;
+   
+     
+   
+ }
+
+
+
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 0 .7rem;
+ }
+
+
+
+h1 {
+    font-size: 2rem;
+    color: #69553B;
+  
+}
+
+mat-label {
+    
+    color:#69553B;
+}
+
+table {
+    background-color:  #DDA329;
+    color: #FFF;
+    width: 100%;
+    
+}
+
+mat-paginator {
+    background-color:  #DDA329;
+    color: #69553B;
+}
+
+mat-form-field {
+    width: 50%;
+    background-color:#DDA329;
+}
+
+
+.header button {
+    align-self: flex-end;
+    width: 10rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color:#69553B;
+    color: #FFF;
+   
+
+}
+
+.edit {
+    color:  #FFF ;
+    margin:.5rem .1rem 0 0;;
+    background-color:#0c810c ;
+    padding: .3rem;
+    border-radius: 50%;
+}
+.delete {
+    color:  #FFF ;
+    
+    background-color:  #C3B4A8;
+    padding: .3rem;
+    margin:.5rem .1rem 0 0;
+    border-radius: 50%;
+}
+
+.mat-mdc-raised-button.mat-unthemed {
+    --mdc-protected-button-container-color: #69553B;
+    --mdc-protected-button-label-text-color: #C3B4A8;
+    font-weight: bold;
+  }
+
+
+
+
+
+
+
+
+  .card{
+    margin: 1rem;
+    width: 20rem;
+    border-radius: 1rem;
+    padding: .3rem;
+  }
+
+  .card h1{
+    color:#FFF;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color:  #6e9e6e;
+    border-radius: .5rem;
+  }
+
+  section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+ .content span {
+    color: #69553B;
+ }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+   .look{
+        
+        color: #DB1B1B;
+  }
+
+  .update {
+    color: rgb(59, 95, 180);
+  }
+  .add {
+    color: #0c810c;
+  }
+
+  .authorite{
+    display: inline-block;
+    padding: .2rem;
+    margin-left: .3rem;
+    margin-bottom: .5rem;
+    border-radius: .3rem;
+    color: #FFF;
+
+  }
+
+  .situation {
+    font-weight: bold;
+    color: #69553B;
+  }
+ 
+
+
+  @media(max-width:756px) {
+    .container {
+        width: 95%;
+       
+    }
+    .header {
+      margin-top: 1rem;
+     
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .header button {
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+    h1 {
+      text-align: center;
+    }
+    mat-form-field {
+      width: 90%;
+    }
+
+ 
+  }

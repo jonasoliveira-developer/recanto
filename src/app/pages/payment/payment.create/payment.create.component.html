@@ -45,13 +45,14 @@
               required
               [(ngModel)]="payment.modePayment"
               name="modePayment"
+
               >
                 <mat-option   value="0">DINHEIRO</mat-option>
                 <mat-option   value="1">CARTÃO</mat-option>
                 <mat-option   value="2">PIX</mat-option>
               </mat-select>
            
-           </mat-form-field>
+             </mat-form-field>
 
              <mat-form-field appearance="fill" >
                 <mat-label>Selecione um residente</mat-label>
@@ -64,7 +65,7 @@
                   >
                     <mat-form-field>
                         <mat-label>Pesquisar</mat-label>
-                        <input matInput (keyup)="applyFilter($event)" placeholder="Buscar pagamento" #input>
+                        <input     matInput (input)="residentFilter($event)" placeholder="Buscar um residente"  #input>
                       </mat-form-field>
                   <mat-option *ngFor="let resident of residents"
                      value="{{resident.id}}">{{resident.name}}

@@ -22,8 +22,8 @@ export class ResidentService {
   create(resident: IResident): Observable<IResident> {
     return this.http.post<IResident>(`${API_CONFIG.baseURL}/residents`, resident)
   }
-  update(employee: IResident): Observable<IResident> {
-    return this.http.put<IResident>(`${API_CONFIG.baseURL}/residents/${employee.id}`, employee)
+  update(resident: IResident): Observable<IResident> {
+    return this.http.put<IResident>(`${API_CONFIG.baseURL}/residents/${resident.id}`, resident)
   }
 
   delete(id:any):Observable<IResident> {

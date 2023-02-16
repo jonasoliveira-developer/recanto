@@ -1,10 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden; }
-
 
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
@@ -61,4 +59,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: h
  background-color: #DDA329;
 }
 
+.ngx-pagination .disabled {
+  color:#CCC;
 
+}
+
+.ngx-pagination a, .ngx-pagination button {
+  color:  #69553B !important;
+ 
+}
+
+.ngx-pagination .current {
+  background:#6e9e6e!important;
+  color: #fefefe;
+  border-radius: .5rem;
+}

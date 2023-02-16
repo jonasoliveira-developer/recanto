@@ -11,7 +11,8 @@ import { AnnoucementsService } from 'src/app/services/annoucements.service';
   styleUrls: ['./annoucements.list.component.css']
 })
 export class AnnoucementsListComponent implements OnInit{
-
+  role:string = ''
+  
 
   
   ELEMENT_DATA: IAnnoucements[] = [];
@@ -34,6 +35,21 @@ export class AnnoucementsListComponent implements OnInit{
     this.dataSource.paginator = this.paginator;
   })
  }
+
+ showComponentByUser():boolean {
+  if(this.role.includes('ROLE_RESIDENT') 
+  && !this.role.includes('ROLE_ADMIN')
+  && !this.role.includes('ROLE_EMPLOYEE')) {
+    return false
+  }
+
+  else {
+    return true
+  }
+
+  
+ }
+ 
 
  applyFilter(event: Event) {
   const filterValue = (event.target as HTMLInputElement).value;

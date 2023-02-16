@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import jsPDF from 'jspdf';
 import { IPayment } from './../../../models/payment';
 import { PaymentService } from './../../../services/payment.service';
 
@@ -19,6 +19,8 @@ export class PaymentReadComponent implements OnInit{
     datePayment:'',
     finishPayment:''
   }
+
+  @ViewChild('content', {static: false})element: ElementRef;
   
   
      constructor(
@@ -41,6 +43,20 @@ export class PaymentReadComponent implements OnInit{
       })
      }
 
+
+     
+     printPaymentPDF():void {
+      let pdf = new jsPDF('p','pt','a4');
+      
+    
+      pdf.html(this.element.nativeElement, {
+        callback:(pdf) => {
+          pdf.save('comprovante_recanto_itapua.pdf')
+        }
+      })
+      
+      
+     }
   
 
 

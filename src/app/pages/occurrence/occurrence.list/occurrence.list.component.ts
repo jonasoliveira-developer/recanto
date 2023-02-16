@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { OccurrenceService } from 'src/app/services/occurrence.service';
 
 import { IOccurrence } from './../../../models/occurences';
@@ -11,12 +10,13 @@ import { IOccurrence } from './../../../models/occurences';
   styleUrls: ['./occurrence.list.component.css']
 })
 export class OccurrenceListComponent implements OnInit {
+  role:string = ''
+  filter:any = ''
   ELEMENT_DATA: IOccurrence[] = [];
   FILTERED_DATA: IOccurrence[] = [];
   
-  
-  displayedColumns: string[] = ['id', 'title', 'personName','situation', 'acctions'];
-  dataSource = new MatTableDataSource<IOccurrence>(this.ELEMENT_DATA);
+  p: number = 1;
+  collection: any[] =[]
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -24,6 +24,8 @@ export class OccurrenceListComponent implements OnInit {
 
 
     ngOnInit(): void {
+      this.filter =  localStorage.getItem('id')
+      this.role = localStorage.getItem('roles')
       this.findAll();
     }
 
@@ -31,30 +33,50 @@ export class OccurrenceListComponent implements OnInit {
     findAll(): void {
       this.service.findAll().subscribe(response => {
         this.ELEMENT_DATA = response;
-        this.dataSource = new MatTableDataSource<IOccurrence>(response);
-        this.dataSource.paginator = this.paginator;
+        this.FILTERED_DATA = response;
+
+        if(this.role.includes('ROLE_RESIDENT') 
+        && !this.role.includes('ROLE_ADMIN')
+        && !this.role.includes('ROLE_EMPLOYEE')) {
+          this.filterByUser()
+        }
       })
+     }
+
+
+     filterByUser() {
+      let list: IOccurrence[] = [];
+        this.ELEMENT_DATA.map(occurrence => {
+           if(occurrence.person == this.filter) {
+             list.push(occurrence)
+           }
+      })
+      this.ELEMENT_DATA = list;
+      
      }
 
      situationReturn(situatin:any): string {
       return situatin == 0 ? 'ABERTO': 'ENCERRADO';
      }
 
-     orderBySituation(situatin:any): void {
-      let list: IOccurrence[] = [];
-       this.ELEMENT_DATA.map(occurrence => {
-          if(occurrence.situation == situatin) {
-            list.push(occurrence)
-          }
-      })
-      this.dataSource = new MatTableDataSource<IOccurrence>(list);
-      this.dataSource.paginator = this.paginator;
-
+     returnColor(color:any):string {
+      if(color == '0'){
+        return color = '#0000CD'
      }
-    
+     else{
+        return color = '#DB1B1B'
+     }
+     
+     }
 
-    applyFilter(event: Event) {
+    
+     applyFilter(event: Event) {
       const filterValue = (event.target as HTMLInputElement).value;
-      this.dataSource.filter = filterValue.trim().toLowerCase();
+       this.ELEMENT_DATA = this.FILTERED_DATA.filter(element =>{
+        return element.title.toLowerCase().includes(filterValue.toLowerCase());
+       })
+       
     }
+
+
 }

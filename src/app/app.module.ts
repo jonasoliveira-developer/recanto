@@ -1,3 +1,4 @@
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { ResidentListComponent } from './pages/resident/resident.list/resident.list.component';
 import { ResidentCreateComponent } from './pages/resident/resident.create/resident.create.component';
 import { NgModule } from '@angular/core';
@@ -28,6 +29,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
+
+
+
 import { NavComponent } from './shared/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -54,10 +59,23 @@ import { OccurrenceListComponent } from './pages/occurrence/occurrence.list/occu
 import { OccurrenceCreateComponent } from './pages/occurrence/occurrence.create/occurrence.create.component';
 import { OccurrenceUpdateComponent } from './pages/occurrence/occurrence.update/occurrence.update.component';
 import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occurrence.read.component';
-import { PaymentReportComponent } from './pages/payment.report/payment.report.component';
+import { PaymentReportComponent } from './pages/payment/payment.report/payment.report.component';
+import { ReservationListComponent } from './pages/reservation/reservation.list/reservation.list.component';
+import { ReservationCreateComponent } from './pages/reservation/reservation.create/reservation.create.component';
 
 
-
+import { MatNativeDateModule } from '@angular/material/core';
+import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
+import {MAT_DATE_LOCALE} from '@angular/material/core';
+import { ReservationUpdateComponent } from './pages/reservation/reservation.update/reservation.update.component';
+import { ReservationDeleteComponent } from './pages/reservation/reservation.delete/reservation.delete.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { UserComponent } from './pages/user/user.component';
+import { OccurrenceDeleteComponent } from './pages/occurrence/occurrence.delete/occurrence.delete.component';
+import { ConciergeListComponent } from './pages/concierge/concierge.list/concierge.list.component';
+import { ConciergeCreateComponent } from './pages/concierge/concierge.create/concierge.create.component';
+import { ConciergeDeleteComponent } from './pages/concierge/concierge.delete/concierge.delete.component';
+import { ConciergeReadComponent } from './pages/concierge/concierge.read/concierge.read.component';
 
 
 
@@ -90,7 +108,18 @@ import { PaymentReportComponent } from './pages/payment.report/payment.report.co
     OccurrenceCreateComponent,
     OccurrenceUpdateComponent,
     OccurrenceReadComponent,
-    PaymentReportComponent
+    PaymentReportComponent,
+    ReservationListComponent,
+    ReservationCreateComponent,
+    LocalDateTimePipe,
+    ReservationUpdateComponent,
+    ReservationDeleteComponent,
+    UserComponent,
+    OccurrenceDeleteComponent,
+    ConciergeListComponent,
+    ConciergeCreateComponent,
+    ConciergeDeleteComponent,
+    ConciergeReadComponent
     
 
   ],
@@ -119,11 +148,17 @@ import { PaymentReportComponent } from './pages/payment.report/payment.report.co
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatDatepickerModule,
     ToastrModule.forRoot({timeOut:4000,closeButton:true, progressBar:true}),
     NgxMaskModule.forRoot(),
+    MatNativeDateModule,
+    FullCalendarModule,
+    NgxPaginationModule
+    
+    
     
   ],
-  providers: [AuthInterceptorProvider],
+  providers: [AuthInterceptorProvider, LocalDateTimePipe, { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

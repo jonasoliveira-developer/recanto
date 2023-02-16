@@ -1,4 +1,12 @@
-import { PaymentReportComponent } from './pages/payment.report/payment.report.component';
+import { ConciergeReadComponent } from './pages/concierge/concierge.read/concierge.read.component';
+import { ConciergeDeleteComponent } from './pages/concierge/concierge.delete/concierge.delete.component';
+import { OccurrenceDeleteComponent } from './pages/occurrence/occurrence.delete/occurrence.delete.component';
+import { UserComponent } from './pages/user/user.component';
+import { ReservationDeleteComponent } from './pages/reservation/reservation.delete/reservation.delete.component';
+import { ReservationUpdateComponent } from './pages/reservation/reservation.update/reservation.update.component';
+import { ReservationCreateComponent } from './pages/reservation/reservation.create/reservation.create.component';
+import { ReservationListComponent } from './pages/reservation/reservation.list/reservation.list.component';
+import { PaymentReportComponent } from './pages/payment/payment.report/payment.report.component';
 import { OccurrenceReadComponent } from './pages/occurrence/occurrence.read/occurrence.read.component';
 import { OccurrenceCreateComponent } from './pages/occurrence/occurrence.create/occurrence.create.component';
 import { AnnoucementsDeleteComponent } from './pages/annoucements/annoucements.delete/annoucements.delete.component';
@@ -29,6 +37,8 @@ import { AnnoucementsListComponent } from './pages/annoucements/annoucements.lis
 import { AnnoucementsUpdateComponent } from './pages/annoucements/annoucements.update/annoucements.update.component';
 import { OccurrenceListComponent } from './pages/occurrence/occurrence.list/occurrence.list.component';
 import { OccurrenceUpdateComponent } from './pages/occurrence/occurrence.update/occurrence.update.component';
+import { ConciergeListComponent } from './pages/concierge/concierge.list/concierge.list.component';
+import { ConciergeCreateComponent } from './pages/concierge/concierge.create/concierge.create.component';
 
 
 
@@ -36,6 +46,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   
   {path:'', component: NavComponent,canActivate: [AuthGuard], children: [
+
+    {path:'users', component: UserComponent},
+    
     {path: 'home', component: HomeComponent },
     {path:'employees', component: EmployeeListComponent},
     {path:'employees/create', component: EmpoloyeeCreateComponent},
@@ -62,7 +75,18 @@ const routes: Routes = [
     {path: 'occurrences', component: OccurrenceListComponent},
     {path: 'occurrences/create', component: OccurrenceCreateComponent},
     {path: 'occurrences/update/:id', component: OccurrenceUpdateComponent},
+    {path: 'occurrences/delete/:id', component: OccurrenceDeleteComponent},
     {path: 'occurrences/read/:id', component: OccurrenceReadComponent},
+
+    {path: 'reservations', component: ReservationListComponent},
+    {path: 'reservations/create', component: ReservationCreateComponent},
+    {path: 'reservations/update/:id', component: ReservationUpdateComponent},
+    {path: 'reservations/delete/:id', component: ReservationDeleteComponent},
+
+    {path: 'concierges', component: ConciergeListComponent},
+    {path: 'concierges/create', component: ConciergeCreateComponent},
+    {path: 'concierges/read/:id', component: ConciergeReadComponent},
+    {path: 'concierges/delete/:id', component: ConciergeDeleteComponent},
    
    
   ]},

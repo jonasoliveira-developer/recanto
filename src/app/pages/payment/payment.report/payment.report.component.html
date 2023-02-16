@@ -1,9 +1,16 @@
 
 
 <div class="wrapper" >
-  <button class="print" routerLink="report" (click)="printPaymentPDF()">
-    <mat-icon>print</mat-icon>
-  </button> 
+  <div class="buttons">
+    <button class="print color-button"  routerLink="../">
+      <mat-icon>arrow_back</mat-icon>
+    </button> 
+
+    <button class="print"  (click)="printPaymentPDF()">
+      <mat-icon>print</mat-icon>
+    </button> 
+  </div>
+
  <div class="container" id="content" #content >
   <h1>Relatório de pagamento </h1> 
   <p>Associação Comunitária Dos Moradores Do Loteamento Recanto De Itapuã</p> 

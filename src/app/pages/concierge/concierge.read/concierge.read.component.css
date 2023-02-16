@@ -1,0 +1,36 @@
+.container {
+    width: 80%; 
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #DDA329;
+}
+
+
+
+.form {
+  
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    box-sizing:content-box;
+    padding: 1rem;
+   
+
+   
+}
+
+
+h1 {
+    font-size: 2rem;
+    color: #69553B;
+}
+mat-label {
+    color:#69553B;
+}
+

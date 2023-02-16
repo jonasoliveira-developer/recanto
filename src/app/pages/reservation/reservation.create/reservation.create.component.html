@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="piker">
+      <h1>Reservar</h1>
+      <mat-form-field appearance="fill" >
+        <mat-label>Tipo de reserva</mat-label>
+        <mat-select
+        [formControl]="localReservation"
+        required
+        name="localReservation"
+        [(ngModel)]="reservation.localReservation">
+          <mat-option   value="0">CHURRASQUEIRA</mat-option>
+          <mat-option   value="1">QUADRA</mat-option>
+          <mat-option   value="2">SALÃO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Escolha a data</mat-label>
+            <input matInput [matDatepicker]="datepicker" 
+                   name="reserveDate"
+                   [formControl]="date
+                   " [(ngModel)]="reservation.reserveDate">
+                   
+            <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+              <mat-datepicker-actions>
+                <button mat-button matDatepickerCancel>Cancelar</button>
+                <button mat-raised-button color="primary" matDatepickerApply>Aplicar</button>
+              </mat-datepicker-actions>
+            </mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill">
+            <mat-label>HORA</mat-label>
+            <input matInput type="time"
+                   [formControl]="time"
+                   name="time"
+                   [(ngModel)]="reservation.time">
+                  
+                  
+            <mat-icon matSuffix>schendule</mat-icon>
+          </mat-form-field>
+
+          <h2>IMPORTANTE:</h2>
+          <P>- Verifique se a data está disponível</P>
+          <P>- Agendamento mediante autorização da ADM</P>
+          <mat-checkbox (click)="igree(0)"  color="Primary-yellow">Estou ciente e de acordo</mat-checkbox>
+          
+          
+
+          <div class="buttons">
+            <button [disabled]="!fieldValidate()"  mat-button color="primary" 
+             (click)="create()"
+            >Reservar</button>
+            <button  mat-button color="warn" routerLink="../">Voltar</button>
+          
+          </div>
+
+    </div>
+
+
+ 
+
+      <div class="aside">
+        <full-calendar id="calendar" [options]="calendarOptions"  ></full-calendar>
+    </div>
+</div>
+
+
+
+    
+
+

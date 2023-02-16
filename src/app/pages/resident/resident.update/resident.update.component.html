@@ -18,15 +18,13 @@
                placeholder="Fulano de tal">
             </mat-form-field>
 
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" >
                 <mat-label>CPF</mat-label>
                 <mat-icon matSuffix>
                     <span class="material-icons-outlined"> 123</span>
                  </mat-icon>
                 <input
                 [(ngModel)]="resident.cpf"
-                required=""
-                [formControl]="cpf"
                 name="cpf"
                  matInput
                  placeholder="000.000.000-00"

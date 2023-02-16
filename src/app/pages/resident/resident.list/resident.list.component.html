@@ -3,7 +3,7 @@
 <div class="mat-elevation-z8 container">
   <div class="header">
     <h1>Residentes</h1>
-  <button routerLink="create" mat-raised-button >Criar</button>
+  <button  mat-raised-button  routerLink="create"  >Criar</button>
   </div>
   
  
@@ -43,7 +43,7 @@
           <a routerLink="update/{{element.id}}"><i class="material-icons edit">
             edit
             </i></a>
-            <a routerLink="delete/{{element.id}}"><i class="material-icons delete">
+            <a routerLink="delete/{{element.id}}" *ngIf="showComponentByUser()"><i class="material-icons delete">
               delete
               </i></a>
         </td>

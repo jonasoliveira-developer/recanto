@@ -11,7 +11,9 @@ import { PaymentService } from 'src/app/services/payment.service';
   styleUrls: ['./payment.list.component.css']
 })
 export class PaymentListComponent implements OnInit{
- page:number = 0
+  role:string = ''
+  filter:any = ''
+  page:number = 0
   ELEMENT_DATA: IPayment[] = [];
   FILTERED_DATA: IPayment[] = [];
   
@@ -26,6 +28,8 @@ export class PaymentListComponent implements OnInit{
 
 
     ngOnInit(): void {
+      this.filter =  localStorage.getItem('id')
+      this.role = localStorage.getItem('roles')
       this.findAll();
     }
 
@@ -36,6 +40,12 @@ export class PaymentListComponent implements OnInit{
         this.dataSource = new MatTableDataSource<IPayment>(response);
         this.dataSource.paginator = this.paginator;
         this.page = response.length
+
+        if(this.role.includes('ROLE_RESIDENT') 
+        && !this.role.includes('ROLE_ADMIN')
+        && !this.role.includes('ROLE_EMPLOYEE')) {
+          this.filterByUser()
+        }
       })
      }
 
@@ -65,6 +75,50 @@ export class PaymentListComponent implements OnInit{
       this.dataSource.paginator = this.paginator;
 
      }
+
+     filterByUser() {
+      let list: IPayment[] = [];
+        this.ELEMENT_DATA.map(resident => {
+           if(resident.person == this.filter) {
+             list.push(resident)
+           }
+      })
+      this.ELEMENT_DATA = list;
+      this.dataSource = new MatTableDataSource<IPayment>(this.ELEMENT_DATA);
+      this.dataSource.paginator = this.paginator;
+      
+    
+     }
+
+     showComponentByUser():boolean {
+      if(this.role.includes('ROLE_RESIDENT') 
+      && !this.role.includes('ROLE_ADMIN')
+      && !this.role.includes('ROLE_EMPLOYEE')) {
+        return false
+      }
+
+      if(this.role.includes('ROLE_EMPLOYEE')
+      ||this.role.includes('ROLE_ADMIN')
+      )
+       {
+          return true
+      }
+    
+      else {
+        return true
+      }
+
+    }
+
+    showComponentByAdmin() {
+        if(this.role.includes('ROLE_ADMIN')) {
+          return true
+        }
+        else {
+          return false
+        }
+    }
+    
 
 
 

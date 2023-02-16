@@ -1,0 +1,52 @@
+
+<div class="container">
+
+    <div class="header">
+      <h1>Listando Serviços</h1>
+     <button routerLink="create" mat-raised-button >Novo serviço</button>
+    </div>
+    <mat-form-field>
+      <mat-label>Pesquisar pelo Titulo</mat-label>
+        <input matInput (input)="applyFilter($event)" placeholder="Digite o responsável da reserva" >
+      </mat-form-field>
+    <section>
+      <mat-card class="card" *ngFor="let concierge of ELEMENT_DATA | paginate: { itemsPerPage: 10, currentPage: p }">
+     
+        <mat-card-header>
+          <h1>{{concierge.title}}</h1>
+        </mat-card-header>
+        
+          <mat-card-content>
+            <p class="situation"><span>Prestador:</span>{{concierge.name}} </p>
+  
+            <span class="situation">Situação:</span> <span class="authorite"
+             [ngStyle]="{backgroundColor: returnColor(concierge.situation)}">
+              {{returnAuthorite(concierge.situation)}}
+            </span>
+  
+            <p class="situation"><span>Documento:</span> {{concierge.document}}</p>
+            <p class="situation"><span>Veiculo:</span> {{concierge.car}}</p>
+
+            <div class="buttons">
+              <a routerLink="update/{{concierge.id}}" class="update" *ngIf="showComponentByUser()">
+                <i class="material-icons ">edit</i>
+              </a>
+              <a routerLink="delete/{{concierge.id}}"><i class="material-icons look">
+                delete
+                </i>
+              </a>
+              <a routerLink="read/{{concierge.id}}"><i class="material-icons delete">
+                visibility
+                </i>
+              </a> 
+    
+            </div>
+          </mat-card-content>
+      </mat-card>
+    </section>
+    <div class="pagination">        
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  
+  </div>
+  

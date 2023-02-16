@@ -25,6 +25,7 @@ payment:IPayment = {
 }
 
   residents: IResident[] = [];
+  FILTERD: IResident[] =[]
 
 
 title: FormControl = new FormControl(null, Validators.required);
@@ -49,7 +50,7 @@ modePayment: FormControl = new FormControl(null, Validators.required);
    findAllResidents():void {
     this.residentService.findAll().subscribe(response => {
       this.residents = response;
-      console.log(response)
+      this.FILTERD = response;
     })
    }
 
@@ -83,5 +84,14 @@ modePayment: FormControl = new FormControl(null, Validators.required);
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
   
+  }
+
+     
+  residentFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+     this.residents = this.FILTERD.filter(element =>{
+      return element.name.toLowerCase().includes(filterValue.toLowerCase());
+     })
+     
   }
 }

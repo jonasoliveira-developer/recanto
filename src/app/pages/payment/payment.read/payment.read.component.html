@@ -1,41 +1,43 @@
-<div class="container">
-    
-    <form class="form">
-        <h1>Detalhe de Pagamento</h1>
+<div class="container" >
+  <button class="print" (click)="printPaymentPDF()">
+    <mat-icon>print</mat-icon>
+  </button>   
+    <form class="form"  id="content" #content>
+      <h3>Associação Comunitária Dos Moradores Do Loteamento Recanto De Itapuã</h3>
         
-            <mat-form-field class="full-width">
-                <mat-label>TITULO</mat-label>
+            <div class="full-width">
+                <mat-label>PAGAMENTO:</mat-label>
               <input
               [disabled]="true"
               [(ngModel)]="payment.title"
               name="title"
                matInput
               >
-            </mat-form-field>
+            </div>
 
-            <mat-form-field class="full-width">
-                <mat-label>VALOR</mat-label>
+            <div class="full-width">
+                <mat-label>VALOR:</mat-label>
                 <input
                 [(ngModel)]="payment.cash"
                 name="payment"
                 matInput
                 [disabled]="true"
                  >
-            </mat-form-field>
+            </div>
 
-            <mat-form-field class="full-width">
-                <mat-label>DATA DE ABERTURA</mat-label>
+            <div class="full-width">
+                <mat-label>DATA DE ABERTURA:</mat-label>
                 <input
                 [(ngModel)]="payment.datePayment"
                 name="datePayment"
                  matInput
                  [disabled]="true"
                 >
-              </mat-form-field>
+              </div>
 
-            <mat-form-field appearance="fill" >
+            <div appearance="fill" >
                 
-                <mat-label>SITUAÇÃO</mat-label>
+                <mat-label>SITUAÇÃO:</mat-label>
                 <input
                 [(ngModel)]="payment.situation"
                 name="situation"
@@ -43,19 +45,19 @@
                 [disabled]="true"
                 >
              
-             </mat-form-field>
+             </div>
 
-             <mat-form-field class="full-width">
-                <mat-label>DATA DE FECHAMENTO</mat-label>
+             <div class="full-width">
+                <mat-label>DATA DE FECHAMENTO:</mat-label>
                 <input
                 [(ngModel)]="payment.finishPayment"
                 name="finishPayment"
                  matInput
                  [disabled]="true"
                 >
-              </mat-form-field>
+              </div>
 
-             <mat-form-field appearance="fill" >
+             <div appearance="fill" >
                 <mat-label>NOME</mat-label>
                 <input
                  name="personName"
@@ -64,11 +66,10 @@
                  [disabled]="true"
                  
                   >
-             </mat-form-field>
-
-             <div class="buttons">
-                <button (click)="goBack()" mat-button color="primary">Voltar</button>
-              </div>
+             </div>
     </form>
+    <div class="buttons">
+      <button (click)="goBack()" mat-button color="primary">Voltar</button>
+    </div>
    
 </div>

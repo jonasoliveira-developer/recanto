@@ -1,6 +1,5 @@
 .container {
     height: 100%;
-    padding: 0 1rem 0 1rem;
    background-color: #f2f2f2;
     
    
@@ -25,10 +24,29 @@
     color:#FFF;
 }
 .menu {
-    position: absolute;
     background-color:green;
+    border-radius: 50%;
+    padding: .5rem  ;
+    cursor: pointer;
    
 }
+
+.button-painel {
+    width: 75%;
+    margin: .5rem auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logout {
+  color: #DDA329;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: .2em;
+}
+
 
 p {
     text-align: end;

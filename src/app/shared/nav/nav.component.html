@@ -1,5 +1,5 @@
 <mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" >
+    <mat-drawer #drawer class="sidenav"  >
       <img src="assets/logo-green.png" alt="imagem de um coqueiro com sol ao lado." />
         <mat-nav-list class="nav-list">
             <a mat-list-item href="home">
@@ -16,7 +16,7 @@
               </div>          
             </a>
 
-        <a mat-list-item routerLink="/">
+        <a mat-list-item href="concierges">
           <div class="list-item--content">
             <i class="material-icons">build</i>
             <span>Serviços</span> 
@@ -30,7 +30,7 @@
         </div>
       </a>
 
-      <a mat-list-item routerLink="/">
+      <a mat-list-item href="reservations">
         <div class="list-item--content">
           <i class="material-icons">date_range</i>
           <span>Reservas</span>
@@ -44,7 +44,7 @@
         </div>
       </a>
 
-      <a mat-list-item href="employees">
+      <a mat-list-item href="employees" *ngIf="authority">
         <div class="list-item--content">
           <i class="material-icons">group</i>
           <span>Funcionários</span>
@@ -69,15 +69,19 @@
     </mat-drawer>
    
     <div class="sidenav-content">
-   
-      <button class="menu" (click)="drawer.toggle()" mat-icon-button>
-        <mat-icon >menu</mat-icon>
-      </button>
-      <p>Olá, {{name}}</p>
       <app-header></app-header>
+      <div class="button-painel">
+        <span (click)="drawer.toggle()" *ngIf="authority">
+          <mat-icon class="menu" >menu</mat-icon>
+        </span>
+        <span (click)="logout()" class="logout">Sair</span>
+      </div>
+      
+      
     
       <div> 
         <router-outlet></router-outlet>
+        <app-footer></app-footer>
       </div>
     </div> 
    

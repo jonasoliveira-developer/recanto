@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit{
-  name:string  = '';
+  authority:boolean = false;
+  role:string=''
   constructor(
     private router: Router,
     private auth: AuthService,
@@ -18,8 +19,21 @@ export class NavComponent implements OnInit{
    ) {}
 
   ngOnInit(): void {
-    this.name = localStorage.getItem('user');
+    this.role =  localStorage.getItem('roles')
+    this.checkAuthorite(this.role)
+  
    
+  }
+
+  checkAuthorite(auth: string):boolean {
+    if(this.role.includes('ROLE_ADMIN') || this.role.includes( 'ROLE_EMPLOYEE')) {
+     return  this.authority = true
+
+    }
+    else {
+      return this.authority = false
+    }
+     
   }
 
   logout():void {

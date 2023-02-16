@@ -1,68 +1,54 @@
 
+<div class="container">
 
-<div class="mat-elevation-z8 container">
-    <div class="header">
-      <h1>Listando Ocorrências</h1>
-    <button routerLink="create" mat-raised-button >Nova Ocorrência</button>
-    </div>
-    <mat-radio-group >
-        <mat-radio-button (click)="orderBySituation(0)" value="0">ABERTO</mat-radio-button>
-        <mat-radio-button  (click)="orderBySituation(1)" value="1">ENCERRADO</mat-radio-button>
-      </mat-radio-group>    
-    
+  <div class="header">
+    <h1>Ocorrências</h1>
+   <button routerLink="create" mat-raised-button >Nova ocorrência</button>
+  </div>
+  <mat-form-field>
+    <mat-label>Pesquisar pelo Titulo</mat-label>
    
-    <mat-form-field>
-      <mat-label>Pesquisar</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Buscar pagamento" #input>
+      <input matInput (input)="applyFilter($event)" placeholder="Digite o titulo da ocorrência" >
     </mat-form-field>
-  
-      <table mat-table [dataSource]="dataSource">
-    
-        <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef> Id. </th>
-          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-        </ng-container >
-    
-    
-        <ng-container matColumnDef="title">
-          <th mat-header-cell *matHeaderCellDef> Titulo </th>
-          <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-        </ng-container>
-    
-        
-        <ng-container matColumnDef="personName">
-          <th mat-header-cell *matHeaderCellDef> Relator </th>
-          <td mat-cell *matCellDef="let element"> {{element.personName}} </td>
-        </ng-container>
-    
+  <section>
+    <mat-card class="card" *ngFor="let occurrence of ELEMENT_DATA | paginate: { itemsPerPage: 10, currentPage: p }">
+   
+      <mat-card-header>
+        <h1>{{occurrence.title}}</h1>
+      </mat-card-header>
+      
+        <mat-card-content>
+          <p class="situation"><span>Relator:</span> {{occurrence.personName}} </p>
 
-        <ng-container matColumnDef="situation">
-            <th mat-header-cell *matHeaderCellDef> Situação </th>
-            <td mat-cell *matCellDef="let element"> {{situationReturn(element.situation)}} </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="acctions">
-          <th mat-header-cell *matHeaderCellDef> Ações </th>
-          <td mat-cell *matCellDef="let element"> 
-            <a routerLink="update/{{element.id}}">
-              <i class="material-icons edit">edit</i>
+          <span class="situation">Situação:</span> <span class="authorite" [ngStyle]="{backgroundColor: returnColor(occurrence.situation)}">
+            {{situationReturn(occurrence.situation)}}
+          </span>
+
+          <p class="situation"><span>Responsável:</span> {{occurrence.personName}}</p>
+          <div class="buttons">
+            <a routerLink="update/{{occurrence.id}}" class="update" >
+              <i class="material-icons ">edit</i>
             </a>
-              <a routerLink="read/{{element.id}}"><i class="material-icons delete">
-                visibility
-                </i>
-              </a>
-          </td>
-        </ng-container>
+            <a routerLink="delete/{{occurrence.id}}"><i class="material-icons look">
+              delete
+              </i>
+            </a>
+            <a routerLink="read/{{occurrence.id}}"><i class="material-icons eyes">
+              visibility
+              </i>
+            </a>
+  
+          </div>
+        </mat-card-content>
+    </mat-card>
+  </section>
+  <div class="pagination">        
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+</div>
+
     
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-    
-      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                     showFirstLastButtons
-                     aria-label="Select page of periodic elements">
-      </mat-paginator>
-    </div>
   
     
   

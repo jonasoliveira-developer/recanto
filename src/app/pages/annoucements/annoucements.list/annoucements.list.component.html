@@ -3,7 +3,7 @@
 <div class="mat-elevation-z8 container">
     <div class="header">
       <h1>Avisos</h1>
-    <button routerLink="create" mat-raised-button >Criar</button>
+    <button routerLink="create" mat-raised-button *ngIf=" showComponentByUser()">Criar</button>
     </div>
     
    
@@ -37,9 +37,9 @@
           <td mat-cell *matCellDef="let element"> {{element.dateOpen}} </td>
         </ng-container>
   
-        <ng-container matColumnDef="acctions">
-          <th mat-header-cell *matHeaderCellDef> Ações </th>
-          <td mat-cell *matCellDef="let element"> 
+        <ng-container matColumnDef="acctions" >
+          <th mat-header-cell *matHeaderCellDef > Ações </th>
+          <td mat-cell *matCellDef="let element" ngIf=" showComponentByUser()"> 
             <a routerLink="update/{{element.id}}"><i class="material-icons edit">
               edit
               </i></a>

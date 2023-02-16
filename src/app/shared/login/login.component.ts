@@ -41,14 +41,14 @@ password = new FormControl(null, Validators.minLength(3));
 
   logar():void {
     this.service.authenticate(this.creds).subscribe(response => {
+      let authorite =  response.headers.get('Authorization').split("[")
       let token =  response.headers.get('Authorization').split(" ")
        this.service.successFullLogin(token[1]);
        localStorage.setItem('id', token[2]);
        localStorage.setItem('user', token[3]);
-       localStorage.setItem('roles', token[4].replace(',', '').slice(1));
-       localStorage.getItem('roles');
+       localStorage.setItem('roles', authorite[1].replace(']', ' '));
        this.router.navigate(['home']);
-        console.log(token[1])
+        
     }, () => {
       this.tost.error('Usuário e/ou senha inválidos!!')
     }) 

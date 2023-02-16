@@ -1,0 +1,60 @@
+<div class="container">
+  
+    <div class="piker">
+        <h1>Atualizar Reserva</h1>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>{{returnLocal(reservation.localReservation)}}</mat-label>
+        <mat-select [disabled]="true"
+        name="localReservation"
+        [(ngModel)]="reservation.localReservation">
+        </mat-select>
+      </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Escolha a data</mat-label>
+            <input 
+            matInput [matDatepicker]="datepicker" 
+             [disabled]="true"
+             name="reserveDate"
+             [(ngModel)]="reservation.reserveDate">
+             <mat-datepicker #datepicker>
+             </mat-datepicker>
+           </mat-form-field>
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Hora</mat-label>
+            <input 
+                   [disabled]="true"
+                   matInput type="time"
+                   name="time"
+                   [(ngModel)]="reservation.time">  
+                  
+            <mat-icon matSuffix>schendule</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" >
+            <mat-label>{{returnAuthorite(reservation.reservationAuthorite)}}</mat-label>
+            <mat-select
+            [disabled]="true"
+            [(ngModel)]="reservation.reservationAuthorite"
+            name="situation"
+            >
+            </mat-select>
+         
+         </mat-form-field>
+
+          <div class="buttons">
+            <button   mat-button color="primary" 
+             (click)="delete()"
+            >deletar</button>
+            <button  mat-button color="warn" (click)="goBack()">Voltar</button>
+          
+          </div>
+
+    </div>
+
+    <div class="aside">
+        <img src="../../../../assets/delete.svg" alt="">
+    </div>
+

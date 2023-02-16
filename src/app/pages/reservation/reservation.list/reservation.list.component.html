@@ -1,0 +1,47 @@
+
+<div class="container">
+
+  <div class="header">
+    <h1>Listando Reservas</h1>
+   <button routerLink="create" mat-raised-button >Nova reserva</button>
+  </div>
+  <mat-form-field>
+    <mat-label>Pesquisar pelo Responsável</mat-label>
+      <input matInput (input)="applyFilter($event)" placeholder="Digite o responsável da reserva" >
+    </mat-form-field>
+  <section>
+    <mat-card class="card" *ngFor="let reservation of ELEMENT_DATA | paginate: { itemsPerPage: 10, currentPage: p }">
+   
+      <mat-card-header>
+        <h1>{{returnLocal(reservation.localReservation)}}</h1>
+      </mat-card-header>
+      
+        <mat-card-content>
+          <p class="situation"><span>Data:</span> {{reservation.reserveDate | localDateTime}} </p>
+
+          <span class="situation">Situação:</span> <span class="authorite" [ngStyle]="{backgroundColor: returnColor(reservation.reservationAuthorite)}">
+            {{returnAuthorite(reservation.reservationAuthorite)}}
+          </span>
+
+          <p class="situation"><span>Responsável:</span> {{reservation.personName}}</p>
+          <div class="buttons">
+            <a routerLink="update/{{reservation.id}}" class="update" *ngIf="showComponentByUser()">
+              <i class="material-icons ">edit</i>
+            </a>
+            <a routerLink="delete/{{reservation.id}}"><i class="material-icons look">
+              delete
+              </i>
+            </a>
+  
+          </div>
+        </mat-card-content>
+    </mat-card>
+  </section>
+  <div class="pagination">        
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+</div>
+
+    
+  

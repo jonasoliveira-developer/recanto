@@ -64,8 +64,6 @@ password: FormControl = new FormControl(null, Validators.minLength(3))
       else {
         this.resident.profiles.push(profile)
       }
-
-      console.log(this.resident.profiles)
     }
 
 

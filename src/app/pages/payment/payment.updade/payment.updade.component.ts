@@ -79,7 +79,7 @@ export class PaymentUpdadeComponent implements OnInit{
       this.paymentService.update(this.payment).subscribe(response => {
           this.router.navigate(['payments'])
           this.toast.success("Pagamento atualizado com sucesso");
-        console.log(response)
+   
   
       }, ex => {
         this.toast.error(ex.error.error)

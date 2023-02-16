@@ -1,0 +1,64 @@
+.container {
+    margin: 1.5rem auto ;
+    padding: 1rem;
+    width: 85%;
+    background-color: #f6f6f6;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:  #dedbdb;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+
+.card {
+    width: 13rem;
+    height: 13rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #DDA329;
+    border-radius: 1rem;
+    cursor: pointer;
+    
+}
+
+.occurrence {
+    background-color: rgb(201, 72, 72);
+}
+
+.payment {
+    background-color: rgb(226, 226, 89);
+}
+.reservation {
+    background-color: rgb(63, 63, 221);
+}
+.annoucements {
+    background-color: rgb(60, 155, 60);
+}
+.services {
+    background-color: #8c8c8c;
+}
+
+a {
+    display:inline-block;
+    text-align: center;
+    height: 13rem;
+    text-decoration: none;
+    color:#FFF;
+    margin: 1rem;
+}
+
+.card i {
+    font-size: 5rem;
+    cursor: pointer;
+    text-align: center;
+}

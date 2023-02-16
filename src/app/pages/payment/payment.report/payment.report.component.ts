@@ -3,7 +3,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import jsPDF from 'jspdf';
 import { PaymentService } from 'src/app/services/payment.service';
 
-import { IPayment } from './../../models/payment';
+import { IPayment } from '../../../models/payment';
 
 @Component({
   selector: 'app-payment.report',

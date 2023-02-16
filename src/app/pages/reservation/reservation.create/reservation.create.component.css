@@ -1,0 +1,48 @@
+.container {
+    width: 90%;
+   
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content:space-between;
+    background-color:  #DDA329;
+    border-radius: 1rem;
+}
+
+.piker {
+    width: 30%;
+    background-color:  #DDA329;
+}
+
+h2 {
+    color: red;
+}
+.aside {
+    width: 100%;
+    background-color: #FFF; 
+
+}
+
+mat-label {
+    color:#69553B;
+}
+
+
+@media(max-width:800px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 90%;
+      
+    }
+
+    .piker {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .aside {
+        width: 100%;
+       
+    }
+}
