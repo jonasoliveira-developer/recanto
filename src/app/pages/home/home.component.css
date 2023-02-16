@@ -10,10 +10,9 @@
 }
 
 .card {
-    width: 90%;
+    width: 100%;
     margin: 3rem auto;
-    padding: 1rem;
-    color: #565656;
+    padding: .2rem;
     background-color:  #DDA329;
     border-radius: 2rem;
     text-align: center;
@@ -23,8 +22,12 @@
 
 }
 
-mat-card-title {
+h2 {
+    width: 100%;
     margin-bottom: 1rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 h1 {
@@ -33,6 +36,7 @@ h1 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 

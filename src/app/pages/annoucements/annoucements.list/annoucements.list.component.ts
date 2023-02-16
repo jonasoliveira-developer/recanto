@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { I } from '@fullcalendar/core/internal-common';
 import { IAnnoucements } from 'src/app/models/annoucements';
 import { AnnoucementsService } from 'src/app/services/annoucements.service';
 
@@ -12,6 +13,7 @@ import { AnnoucementsService } from 'src/app/services/annoucements.service';
 })
 export class AnnoucementsListComponent implements OnInit{
   role:string = ''
+  filter:any = '';
   
 
   
@@ -24,7 +26,10 @@ export class AnnoucementsListComponent implements OnInit{
 
   constructor(private service: AnnoucementsService) {}
 
+
  ngOnInit(): void {
+  this.filter =  localStorage.getItem('id')
+  this.role = localStorage.getItem('roles')
    this.findAll();
  }
 
@@ -49,6 +54,7 @@ export class AnnoucementsListComponent implements OnInit{
 
   
  }
+
  
 
  applyFilter(event: Event) {
