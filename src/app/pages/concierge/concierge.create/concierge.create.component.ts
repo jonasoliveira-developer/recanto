@@ -17,11 +17,11 @@ import { ConciergeService } from './../../../services/concierge.service';
 
 export class ConciergeCreateComponent implements OnInit {
   residents: IResident[] = [];
-  FILTERD: IResident[] =[]
-
+  FILTERD: IResident[] = []
   verify:boolean = false;
   term:boolean = false;
-
+  role:string = ''
+  filter:any = ''
 
   concierge: IConcierge = {
     id:'',
@@ -57,6 +57,8 @@ export class ConciergeCreateComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
+    this.filter =  localStorage.getItem('id')
+    this.role = localStorage.getItem('roles')
     this.findAllResidents();
   }
 
@@ -64,7 +66,27 @@ export class ConciergeCreateComponent implements OnInit {
     this.residentService.findAll().subscribe(response => {
       this.residents = response;
       this.FILTERD = response;
+
+      if(this.role.includes('ROLE_RESIDENT') 
+      && !this.role.includes('ROLE_ADMIN')
+      && !this.role.includes('ROLE_EMPLOYEE')) {
+        this.filterByUser()
+      }
     })
+
+    
+   }
+
+   
+   filterByUser() {
+    let list: IResident[] = [];
+    this.residents.map(resident => {
+         if(resident.id == this.filter) {
+           list.push(resident)
+         }
+    })
+    this.residents = list;    
+  
    }
 
   create():void {

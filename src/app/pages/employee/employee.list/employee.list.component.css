@@ -1,6 +1,5 @@
 .container {
     width: 70%;
-    min-width: 550px;
     height: 100%;
     padding:.5rem;
     margin:  2rem auto;
@@ -13,12 +12,7 @@
     
  }
 
- @media(max-width:756px) {
-    .container {
-        width: 95%;
-       
-    }
- }
+
 
  .header {
     display: flex;
@@ -84,5 +78,27 @@ mat-form-field {
     --mdc-protected-button-label-text-color: #C3B4A8;
     font-weight: bold;
   }
+
+  @media(max-width:756px) {
+    .container {
+        width: 90%;
+       
+    }
+
+   
+    
+    .header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     }
+    
+    
+     .header button {
+        width: 90vw;
+        align-self: center;
+     }
+    
+ }
 
 

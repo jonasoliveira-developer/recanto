@@ -18,7 +18,7 @@ export class PaymentListComponent implements OnInit{
   FILTERED_DATA: IPayment[] = [];
   
   
-  displayedColumns: string[] = ['id', 'title', 'personName', 'value','situation','modePayment', 'acctions'];
+  displayedColumns: string[] = [ 'title', 'personName', 'value', 'acctions'];
   dataSource = new MatTableDataSource<IPayment>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

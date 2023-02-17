@@ -15,7 +15,7 @@ filter:any = ''
 ELEMENT_DATA: IResident[] = [];
 ELEMENT_FILTERED: IResident[] = [];
 
-  displayedColumns: string[] = ['id', 'cpf', 'name', 'email', 'acctions'];
+  displayedColumns: string[] = [ 'name', 'email', 'acctions'];
   dataSource = new MatTableDataSource<IResident>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

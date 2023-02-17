@@ -1,10 +1,10 @@
 .container {
-    width:70%; 
+    width:80%; 
     margin: 1rem auto;
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 1rem;
     background-color: #DDA329;
@@ -25,7 +25,7 @@
 }
 
 .form input {
-    width: 300px;
+    max-width: 300px;
     margin-top: .5rem;
     font-size: 1rem;
     background-color: transparent;
@@ -55,6 +55,7 @@
 h1 {
     font-size: 2rem;
     color: #69553B;
+    text-align: center;
 }
 mat-label {
     color:#69553B;

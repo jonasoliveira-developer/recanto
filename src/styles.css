@@ -74,3 +74,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: h
   color: #fefefe;
   border-radius: .5rem;
 }
+
+
+td {
+  padding: .1rem;
+  word-wrap: break-word !important;
+}
+

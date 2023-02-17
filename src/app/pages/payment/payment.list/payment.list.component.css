@@ -1,6 +1,5 @@
 .container {
-    width: 80%;
-    min-width: 550px;
+    width: 70%;
     height: 100%;
     padding:.5rem;
     margin:  2rem auto;
@@ -13,19 +12,14 @@
    
  }
 
- @media(max-width:756px) {
-    .container {
-        width: 95%;
-       
-    }
- }
+
 
  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 .7rem;
+    margin: 0;
  }
 
 h1 {
@@ -39,9 +33,33 @@ mat-label {
 }
 
 table {
+    width: 100%;
     background-color:  #DDA329;
     color: #FFF;
 }
+
+thead tr{
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+th {
+    text-align: center;
+}
+td {
+    padding: .3rem;
+    word-break: break-all;
+    text-align: center;
+    border-right: 1px solid #69553B;
+    
+}
+
+td:last-child {
+    border-right:0px;
+}
+
 
 mat-paginator {
     background-color:  #DDA329;
@@ -100,6 +118,29 @@ mat-form-field {
     --mdc-protected-button-label-text-color: #C3B4A8;
     font-weight: bold;
   }
+
+  @media(max-width:756px) {
+    .container {
+        width: 90%;
+       
+    }
+
+   
+    
+    .header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     }
+    
+    
+     .header button {
+        width: 90vw;
+        align-self: center;
+     }
+    
+ }
+
 
 
 

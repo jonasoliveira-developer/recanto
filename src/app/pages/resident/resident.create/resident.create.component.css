@@ -47,12 +47,18 @@ mat-label {
 
 
 @media(max-width:900px) {
-  
+    .container {
+        width: 90%;
+    }
     .aside {
         display: none;
     }
 
     .form {
         width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
     }
   }

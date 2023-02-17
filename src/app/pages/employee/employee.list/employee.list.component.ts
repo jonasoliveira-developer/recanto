@@ -14,7 +14,7 @@ export class EmployeeListComponent implements OnInit {
   role:string = ''
   ELEMENT_DATA: IEmployee[] = [];
 
-  displayedColumns: string[] = ['id', 'cpf', 'name', 'email', 'acctions'];
+  displayedColumns: string[] = [ 'name', 'email', 'acctions'];
   dataSource = new MatTableDataSource<IEmployee>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
