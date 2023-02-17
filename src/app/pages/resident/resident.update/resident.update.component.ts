@@ -71,7 +71,6 @@ export class ResidentUpdateComponent implements OnInit{
           this.resident.profiles.push(profile)
         }
   
-        console.log(this.resident.profiles)
       }
   
   
