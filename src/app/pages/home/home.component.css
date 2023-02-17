@@ -1,16 +1,16 @@
 .container {
-    width: 70%;
+    width: 95%;
     height: 100%;
     margin: 1rem auto;
     background-color: #e3e3e3;
-    padding: 2rem;
     border-radius: 1rem;
+    padding: 1rem 0 1rem 0;
    
    
 }
 
 .card {
-    width: 100%;
+    width: 90%;
     margin: 3rem auto;
     padding: .2rem;
     background-color:  #DDA329;

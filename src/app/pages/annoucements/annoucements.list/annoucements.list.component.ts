@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { I } from '@fullcalendar/core/internal-common';
 import { IAnnoucements } from 'src/app/models/annoucements';
 import { AnnoucementsService } from 'src/app/services/annoucements.service';
 
@@ -19,7 +18,7 @@ export class AnnoucementsListComponent implements OnInit{
   
   ELEMENT_DATA: IAnnoucements[] = [];
 
-  displayedColumns: string[] = ['id', 'title', 'person', 'date', 'acctions'];
+  displayedColumns: string[] = [ 'title', 'person', 'date', 'acctions'];
   dataSource = new MatTableDataSource<IAnnoucements>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

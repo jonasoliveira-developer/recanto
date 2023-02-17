@@ -1,6 +1,6 @@
 <div class="container">
     <div class="form">
-      <h1>Deletar</h1>
+      <h1>Ver Detalhe</h1>
 
       <mat-form-field appearance="fill" class="full">
         <mat-label>Titulo</mat-label>
@@ -46,12 +46,13 @@
 
       <mat-form-field appearance="fill" class="full">
         <mat-label>Descrição</mat-label>
-        <input
+        <textarea
         [(ngModel)]="concierge.description"
          name="description"
          matInput 
          disabled="true"
          type="text">
+        </textarea>
       </mat-form-field>
 
       <mat-form-field appearance="fill" class="full">

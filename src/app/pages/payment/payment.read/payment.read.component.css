@@ -15,17 +15,17 @@
 .form {
     flex-direction: column;
     display: flex;
-    width: 80%;
-    box-sizing:content-box;
-    padding: 1rem;
-    border-bottom: 1px solid #000;
-   
-
-   
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 95%;
+    margin: auto;
+    border: .5px solid #69553B;
+    border-radius: .5rem;
+    padding: .3rem;
 }
 
 .form input {
-    max-width: 300px;
+    max-width: 200px;
     margin-top: .5rem;
     font-size: 1rem;
     background-color: transparent;
@@ -56,7 +56,15 @@ h1 {
     font-size: 2rem;
     color: #69553B;
     text-align: center;
+    
 }
 mat-label {
     color:#69553B;
+}
+
+@media(max-width:900px) {
+  
+    .container {
+        width: 98%;
+    }
 }

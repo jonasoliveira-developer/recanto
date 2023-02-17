@@ -48,6 +48,13 @@ mat-label {
 
 
 @media(max-width:900px) {
+    .container {
+        width: 95%;
+    }
+
+    form {
+        width: 100%;
+    }
   
     .aside {
         display: none;

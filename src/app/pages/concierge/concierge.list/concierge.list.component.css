@@ -75,12 +75,7 @@ mat-form-field {
     border-radius: 50%;
 }
 .delete {
-    color:  #FFF ;
-    
-    background-color:  #C3B4A8;
-    padding: .3rem;
-    margin:.5rem .1rem 0 0;
-    border-radius: 50%;
+    color:  rgb(225, 60, 60) ;
 }
 
 .mat-mdc-raised-button.mat-unthemed {
@@ -88,18 +83,6 @@ mat-form-field {
     --mdc-protected-button-label-text-color: #C3B4A8;
     font-weight: bold;
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -141,7 +124,7 @@ mat-form-field {
 
    .look{
         
-        color: #DB1B1B;
+        color: #CCC;
   }
 
   .update {

@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 .7rem;
+  
  }
 
 h1 {
@@ -81,23 +81,23 @@ mat-form-field {
 
   @media(max-width:756px) {
     .container {
-        width: 90%;
+        width: 95%;
+        padding: .3rem;
        
     }
 
-   
-    
     .header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
      }
-    
+
     
      .header button {
         width: 90vw;
         align-self: center;
      }
+    
     
  }
 

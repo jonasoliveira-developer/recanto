@@ -48,6 +48,9 @@ mat-label {
 
 
 @media(max-width:900px) {
+    .container {
+        width: 95%;
+    }
   
     .aside {
         display: none;

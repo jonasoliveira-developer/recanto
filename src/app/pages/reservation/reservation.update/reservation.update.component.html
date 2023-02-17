@@ -2,44 +2,6 @@
   
     <div class="piker">
         <h1>Atualizar Reserva</h1>
-      <mat-form-field appearance="fill" >
-        <mat-label>{{returnLocal(reservation.localReservation)}}</mat-label>
-        <mat-select
-        [formControl]="localReservation"
-        required
-        name="localReservation"
-        [(ngModel)]="reservation.localReservation">
-          <mat-option   value="0">CHURRASQUEIRA</mat-option>
-          <mat-option   value="1">QUADRA</mat-option>
-          <mat-option   value="2">SALÃO</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-        <mat-form-field appearance="fill">
-            <mat-label>Escolha a data</mat-label>
-            <input matInput [matDatepicker]="datepicker" 
-                   name="reserveDate"
-                   [formControl]="date
-                   " [(ngModel)]="reservation.reserveDate">
-                   
-            <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
-            <mat-datepicker #datepicker>
-              <mat-datepicker-actions>
-                <button mat-button matDatepickerCancel>Cancelar</button>
-                <button mat-raised-button color="primary" matDatepickerApply>Aplicar</button>
-              </mat-datepicker-actions>
-            </mat-datepicker>
-          </mat-form-field>
-          
-          <mat-form-field appearance="fill">
-            <mat-label>Hora</mat-label>
-            <input matInput type="time"
-                   [formControl]="time"
-                   name="time"
-                   [(ngModel)]="reservation.time">  
-                  
-            <mat-icon matSuffix>schendule</mat-icon>
-          </mat-form-field>
 
           <mat-form-field appearance="fill" >
             <mat-label>{{returnAuthorite(reservation.reservationAuthorite)}}</mat-label>
@@ -64,12 +26,6 @@
 
     </div>
 
-
- 
-
-      <div class="aside">
-        <full-calendar id="calendar" [options]="calendarOptions"  ></full-calendar>
-      </div>
 </div>
 
 

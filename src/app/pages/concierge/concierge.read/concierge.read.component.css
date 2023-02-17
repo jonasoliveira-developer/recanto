@@ -34,3 +34,10 @@ mat-label {
     color:#69553B;
 }
 
+
+
+@media(max-width:900px) {
+    .container {
+        width: 95%;
+    }
+}

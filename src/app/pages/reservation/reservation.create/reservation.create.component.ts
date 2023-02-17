@@ -130,7 +130,7 @@ igree(cod:any) {
 
   calendarOptions: CalendarOptions = {
     headerToolbar: {
-      start:'prev, next, today',
+      start:'prev, next',
       center:'title',
       end:'dayGridMonth,timeGridDay'
     },
