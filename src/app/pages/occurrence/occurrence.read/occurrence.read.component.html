@@ -26,12 +26,13 @@
 
               <mat-form-field class="full-width">
                 <mat-label>DESCRIÇÃO</mat-label>
-              <input
+              <textarea
               [disabled]="true"
               [(ngModel)]="occurrence.description"
               name="description"
                matInput
               >
+              </textarea>
             </mat-form-field>
 
             <mat-form-field appearance="fill" >
