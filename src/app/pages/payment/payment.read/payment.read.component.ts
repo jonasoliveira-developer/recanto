@@ -17,7 +17,8 @@ export class PaymentReadComponent implements OnInit{
     person:'',
     personName:'',
     datePayment:'',
-    finishPayment:''
+    finishPayment:'',
+    modePayment:'',
   }
 
   @ViewChild('content', {static: false})element: ElementRef;
@@ -38,6 +39,7 @@ export class PaymentReadComponent implements OnInit{
      findById():void {
       this.paymentService.findById(this.payment.id).subscribe(response => {
         this.payment = response;
+        this.payment.modePayment = this.modePayment(this.payment.modePayment)
 
         this.payment.situation = this.payment.situation == 0 ? 'ABERTO': 'ENCERRADO'
       })
@@ -46,7 +48,7 @@ export class PaymentReadComponent implements OnInit{
 
      
      printPaymentPDF():void {
-      let pdf = new jsPDF('p','pt','a4');
+      let pdf = new jsPDF('l','pt','a4');
       
     
       pdf.html(this.element.nativeElement, {
@@ -59,6 +61,16 @@ export class PaymentReadComponent implements OnInit{
      }
   
 
+     modePayment(mode:any): string {
+      if(mode == '0') {
+        return 'DINHEIRO'
+      }
+      if(mode == '1') {
+        return 'CARTÃO'
+      }else {
+        return 'PIX'
+      }
+     }
 
   
      goBack():void {

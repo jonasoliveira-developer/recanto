@@ -26,6 +26,16 @@
             </div>
 
             <div class="full-width">
+              <mat-label>PAGAMENTO:</mat-label>
+              <input
+              [(ngModel)]="payment.modePayment"
+              name="modePayment"
+              matInput
+              [disabled]="true"
+               >
+          </div>
+
+            <div class="full-width">
                 <mat-label>DATA DE ABERTURA:</mat-label>
                 <input
                 [(ngModel)]="payment.datePayment"

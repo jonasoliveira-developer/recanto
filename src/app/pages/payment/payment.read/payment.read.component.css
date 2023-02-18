@@ -15,17 +15,17 @@
 .form {
     flex-direction: column;
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: flex-start;
     width: 95%;
-    margin: auto;
+    margin: 1rem auto;
     border: .5px solid #69553B;
     border-radius: .5rem;
     padding: .3rem;
+    background-color: #FFF;
 }
 
 .form input {
-    max-width: 200px;
     margin-top: .5rem;
     font-size: 1rem;
     background-color: transparent;
