@@ -56,7 +56,7 @@ export class ResidentUpdateComponent implements OnInit{
     update():void {
       this.service.update(this.resident).subscribe(respose => {
         this.router.navigate(['residents'])
-        this.toast.success("Funcionário atualizado com sucesso!");
+        this.toast.success("Residente atualizado com sucesso!");
       }, ex => {
         if(ex.error.errors) {
           ex.error.errors.map(x => this.toast.error(x.message))

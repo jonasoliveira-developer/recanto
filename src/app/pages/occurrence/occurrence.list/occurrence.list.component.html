@@ -11,7 +11,7 @@
       <input matInput (input)="applyFilter($event)" placeholder="Digite o titulo da ocorrência" >
     </mat-form-field>
   <section>
-    <mat-card class="card" *ngFor="let occurrence of ELEMENT_DATA | paginate: { itemsPerPage: 10, currentPage: p }">
+    <mat-card class="card" *ngFor="let occurrence of ELEMENT_DATA | paginate: { itemsPerPage: 5, currentPage: p }">
    
       <mat-card-header>
         <h1>{{occurrence.title}}</h1>
