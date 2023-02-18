@@ -66,7 +66,7 @@
           
        
           
-        <section class="section">
+        <section class="section" *ngIf=" showComponentByUser()">
             <mat-checkbox (click)="addProfile(0)"  class="margin" color="Primary-yellow">Admin</mat-checkbox>
             <mat-checkbox (click)="addProfile(1)"  class="margin" color="primary-yellow">Funcionario</mat-checkbox>
             <mat-checkbox (click)="addProfile(2)" [checked]="true" class="margin" color="primary-yellow">Residente</mat-checkbox>

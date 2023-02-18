@@ -63,7 +63,6 @@ export class ConciergeCreateComponent implements OnInit {
   findAllResidents():void {
     this.residentService.findAll().subscribe(response => {
       this.residents = response;
-      this.FILTERD = response;
 
       if(this.role.includes('ROLE_RESIDENT') 
       && !this.role.includes('ROLE_ADMIN')
@@ -83,7 +82,8 @@ export class ConciergeCreateComponent implements OnInit {
            list.push(resident)
          }
     })
-    this.residents = list;    
+    this.residents = list;  
+    this.FILTERD = list  
   
    }
 
@@ -106,6 +106,18 @@ export class ConciergeCreateComponent implements OnInit {
       return element.name.toLowerCase().includes(filterValue.toLowerCase());
      })
      
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+     this.residents = this.FILTERD.filter(element =>{
+      return element.name.toLowerCase().includes(filterValue.toLowerCase());
+     
+     })
+
+     this.filterByUser();
+     
+   
   }
 
   

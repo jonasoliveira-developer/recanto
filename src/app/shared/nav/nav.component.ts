@@ -21,6 +21,7 @@ export class NavComponent implements OnInit{
   ngOnInit(): void {
     this.role =  localStorage.getItem('roles')
     this.checkAuthorite(this.role)
+    this.redirectTo()
   
    
   }
@@ -40,6 +41,10 @@ export class NavComponent implements OnInit{
     this.router.navigate(['login'])
     this.auth.lougout();
     this.tost.info("Logout realizado com sucesso!!")
+  }
+
+  redirectTo() {
+    this.router.navigate(['home'])
   }
 
 }

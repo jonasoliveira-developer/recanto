@@ -108,8 +108,8 @@ export class ConciergeListComponent implements OnInit{
     applyFilter(event: Event) {
       const filterValue = (event.target as HTMLInputElement).value;
        this.ELEMENT_DATA = this.FILTERED_DATA.filter(element =>{
-        
         return element.title.toLowerCase().includes(filterValue.toLowerCase());
+       
        })
 
        this.filterByUser();

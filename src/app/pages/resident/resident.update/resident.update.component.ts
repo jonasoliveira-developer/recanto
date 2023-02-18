@@ -11,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resident.update.component.css']
 })
 export class ResidentUpdateComponent implements OnInit{
+  role:string = ''
+  filter:any = ''
+
   resident: IResident = {
     id:'',
     name:'',
@@ -37,6 +40,8 @@ export class ResidentUpdateComponent implements OnInit{
       ) {}
   
     ngOnInit(): void {
+      this.filter =  localStorage.getItem('id')
+      this.role = localStorage.getItem('roles')
       this.resident.id = this.route.snapshot.paramMap.get('id');
       this.findById();
     }
@@ -61,6 +66,21 @@ export class ResidentUpdateComponent implements OnInit{
         }
       })
     }
+
+    showComponentByUser():boolean {
+      if( 
+       !this.role.includes('ROLE_ADMIN')
+      ) {
+        return false
+      }
+    
+      else {
+        return true
+      }
+    
+      
+     }
+    
     
     addProfile(profile:any):void {
        
