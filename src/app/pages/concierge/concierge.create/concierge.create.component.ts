@@ -44,8 +44,6 @@ export class ConciergeCreateComponent implements OnInit {
   title: FormControl = new FormControl(null, Validators.required);
   name: FormControl = new FormControl(null, Validators.required);
   document: FormControl = new FormControl(null, Validators.required);
-  car: FormControl = new FormControl(null, Validators.required);
-  description: FormControl = new FormControl(null, Validators.required);
   resident: FormControl = new FormControl(null, Validators.required);
 
 
@@ -115,9 +113,7 @@ export class ConciergeCreateComponent implements OnInit {
     return this.situation.valid && 
            this.title.valid && 
            this.name.valid &&
-           this.document.valid &&
-           this.car.valid &&
-           this.description.valid
+           this.document.valid 
 
           
   }

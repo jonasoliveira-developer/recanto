@@ -1,7 +1,7 @@
 <div class="container">
   
     <div class="piker">
-        <h1>Atualizar Reserva</h1>
+        <h1>Deletar Reserva</h1>
 
       <mat-form-field appearance="fill" >
         <mat-label>{{returnLocal(reservation.localReservation)}}</mat-label>
@@ -12,7 +12,7 @@
       </mat-form-field>
 
         <mat-form-field appearance="fill">
-            <mat-label>Escolha a data</mat-label>
+            <mat-label> data</mat-label>
             <input 
             matInput [matDatepicker]="datepicker" 
              [disabled]="true"
@@ -22,16 +22,7 @@
              </mat-datepicker>
            </mat-form-field>
           
-          <mat-form-field appearance="fill">
-            <mat-label>Hora</mat-label>
-            <input 
-                   [disabled]="true"
-                   matInput type="time"
-                   name="time"
-                   [(ngModel)]="reservation.time">  
-                  
-            <mat-icon matSuffix>schendule</mat-icon>
-          </mat-form-field>
+         
 
           <mat-form-field appearance="fill" >
             <mat-label>{{returnAuthorite(reservation.reservationAuthorite)}}</mat-label>

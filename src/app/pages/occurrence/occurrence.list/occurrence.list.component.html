@@ -26,7 +26,7 @@
 
           <p class="situation"><span>Responsável:</span> {{occurrence.personName}}</p>
           <div class="buttons">
-            <a routerLink="update/{{occurrence.id}}" class="update" >
+            <a routerLink="update/{{occurrence.id}}" class="update" *ngIf="showComponentByUser()">
               <i class="material-icons ">edit</i>
             </a>
             <a routerLink="delete/{{occurrence.id}}"><i class="material-icons look">

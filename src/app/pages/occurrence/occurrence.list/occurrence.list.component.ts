@@ -55,6 +55,8 @@ export class OccurrenceListComponent implements OnInit {
       
      }
 
+
+
      situationReturn(situatin:any): string {
       return situatin == 0 ? 'ABERTO': 'ENCERRADO';
      }
@@ -67,6 +69,20 @@ export class OccurrenceListComponent implements OnInit {
         return color = '#DB1B1B'
      }
      
+     }
+
+     showComponentByUser():boolean {
+      if(this.role.includes('ROLE_RESIDENT') 
+      && !this.role.includes('ROLE_ADMIN')
+      && !this.role.includes('ROLE_EMPLOYEE')) {
+        return false
+      }
+    
+      else {
+        return true
+      }
+    
+      
      }
 
     

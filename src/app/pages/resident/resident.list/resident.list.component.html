@@ -3,7 +3,7 @@
 <div class="mat-elevation-z8 container">
   <div class="header">
     <h1>Residentes</h1>
-  <button  mat-raised-button  routerLink="create"  >Criar</button>
+  <button  mat-raised-button  routerLink="create" *ngIf="showComponentByUser()" >Criar</button>
   </div>
   
  
