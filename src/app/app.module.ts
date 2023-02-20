@@ -76,6 +76,7 @@ import { ConciergeListComponent } from './pages/concierge/concierge.list/concier
 import { ConciergeCreateComponent } from './pages/concierge/concierge.create/concierge.create.component';
 import { ConciergeDeleteComponent } from './pages/concierge/concierge.delete/concierge.delete.component';
 import { ConciergeReadComponent } from './pages/concierge/concierge.read/concierge.read.component';
+import { ConciergeUpdateComponent } from './pages/concierge/concierge.update/concierge.update.component';
 
 
 
@@ -119,7 +120,8 @@ import { ConciergeReadComponent } from './pages/concierge/concierge.read/concier
     ConciergeListComponent,
     ConciergeCreateComponent,
     ConciergeDeleteComponent,
-    ConciergeReadComponent
+    ConciergeReadComponent,
+    ConciergeUpdateComponent
     
 
   ],

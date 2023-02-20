@@ -12,8 +12,9 @@
 
 
 .form {
-    flex-direction: column;
+  
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 50%;
     box-sizing:content-box;
@@ -47,17 +48,19 @@ mat-label {
 
 
 @media(max-width:900px) {
-  .container {
-    width: 95%;
-  }
+    .container {
+        width: 95%;
+    }
+
+    form {
+        width: 100%;
+    }
+  
     .aside {
         display: none;
     }
 
     .form {
         width: 90%;
-    }
-    h1 {
-        font-size: 1.8rem;
     }
   }

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="form">
+      <h1>Atualizar</h1>
+
+   
+      <mat-form-field appearance="fill" >
+        <mat-label>{{returnSituation(concierge.situation)}}</mat-label>
+        <mat-select
+        [formControl]="situation"
+        required
+        name="situation"
+        [(ngModel)]="concierge.situation">
+          <mat-option   value="0">ABERTO</mat-option>
+          <mat-option   value="1">ENCERRADO</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+         
+
+          <div class="buttons">
+            <button  mat-button color="primary" 
+             (click)="update()"
+            >Atulizar</button>
+            <button  mat-button color="warn" (click)="goBack()">Voltar</button>
+          
+          </div>
+
+    </div>
+
+       
+    <div class="aside">
+        <img src="../../../../assets/update.svg" alt="">
+    </div>

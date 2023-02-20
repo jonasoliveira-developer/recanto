@@ -1,3 +1,4 @@
+import { ConciergeUpdateComponent } from './pages/concierge/concierge.update/concierge.update.component';
 import { ConciergeReadComponent } from './pages/concierge/concierge.read/concierge.read.component';
 import { ConciergeDeleteComponent } from './pages/concierge/concierge.delete/concierge.delete.component';
 import { OccurrenceDeleteComponent } from './pages/occurrence/occurrence.delete/occurrence.delete.component';
@@ -85,6 +86,7 @@ const routes: Routes = [
 
     {path: 'concierges', component: ConciergeListComponent},
     {path: 'concierges/create', component: ConciergeCreateComponent},
+    {path: 'concierges/update/:id', component: ConciergeUpdateComponent},
     {path: 'concierges/read/:id', component: ConciergeReadComponent},
     {path: 'concierges/delete/:id', component: ConciergeDeleteComponent},
    
