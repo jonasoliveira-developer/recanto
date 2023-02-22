@@ -18,8 +18,8 @@
 
         <a mat-list-item href="concierges">
           <div class="list-item--content">
-            <i class="material-icons">build</i>
-            <span>Serviços</span> 
+            <i class="material-icons">engineering</i>
+            <span>Portaria</span> 
           </div>    
         </a>
 
@@ -76,7 +76,9 @@
         </span>
         <span (click)="logout()" class="logout">Sair</span>
       </div>
-
+      <div class="loader-container" *ngIf="loaderService.isLoading | async">
+        <mat-progress-spinner  mode="indeterminate" style="top: 50%; left: 50%; color:aqua; " ></mat-progress-spinner>
+      </div>
       <div class="pages"> 
         <router-outlet></router-outlet>
         <app-footer></app-footer>

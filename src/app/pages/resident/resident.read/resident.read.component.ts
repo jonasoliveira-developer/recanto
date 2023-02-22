@@ -4,13 +4,13 @@ import { ToastrService } from 'ngx-toastr';
 import { ResidentService } from '../../../services/resident.service';
 import { IResident } from './../../../models/residents';
 
-@Component({
-  selector: 'app-resident.delete',
-  templateUrl: './resident.delete.component.html',
-  styleUrls: ['./resident.delete.component.css']
-})
-export class ResidentDeleteComponent implements OnInit{
 
+@Component({
+  selector: 'app-resident.read',
+  templateUrl: './resident.read.component.html',
+  styleUrls: ['./resident.read.component.css']
+})
+export class ResidentReadComponent {
   resident: IResident = {
     id:'',
     name:'',

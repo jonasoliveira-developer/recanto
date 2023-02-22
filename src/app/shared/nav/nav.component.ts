@@ -1,3 +1,4 @@
+import { LoaderService } from './../../services/loader.service';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,7 +15,8 @@ export class NavComponent implements OnInit{
   constructor(
     private router: Router,
     private auth: AuthService,
-    private tost: ToastrService
+    private tost: ToastrService,
+    public loaderService: LoaderService
     
    ) {}
 

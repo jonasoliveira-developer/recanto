@@ -19,6 +19,8 @@ export class ResidentUpdateComponent implements OnInit{
     name:'',
     cpf:'',
     email:'',
+    phoneNumber:'',
+    adress:'',
     password:'',
     profiles: [],
     date:''

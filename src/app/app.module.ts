@@ -1,3 +1,4 @@
+import { LoaderInterceptorProvider } from './services/interceptor.service';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ResidentListComponent } from './pages/resident/resident.list/resident.list.component';
 import { ResidentCreateComponent } from './pages/resident/resident.create/resident.create.component';
@@ -30,6 +31,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 
 
@@ -77,6 +79,7 @@ import { ConciergeCreateComponent } from './pages/concierge/concierge.create/con
 import { ConciergeDeleteComponent } from './pages/concierge/concierge.delete/concierge.delete.component';
 import { ConciergeReadComponent } from './pages/concierge/concierge.read/concierge.read.component';
 import { ConciergeUpdateComponent } from './pages/concierge/concierge.update/concierge.update.component';
+import { ResidentReadComponent } from './pages/resident/resident.read/resident.read.component';
 
 
 
@@ -121,7 +124,8 @@ import { ConciergeUpdateComponent } from './pages/concierge/concierge.update/con
     ConciergeCreateComponent,
     ConciergeDeleteComponent,
     ConciergeReadComponent,
-    ConciergeUpdateComponent
+    ConciergeUpdateComponent,
+    ResidentReadComponent
     
 
   ],
@@ -155,12 +159,17 @@ import { ConciergeUpdateComponent } from './pages/concierge/concierge.update/con
     NgxMaskModule.forRoot(),
     MatNativeDateModule,
     FullCalendarModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatProgressSpinnerModule
     
     
     
   ],
-  providers: [AuthInterceptorProvider, LocalDateTimePipe, { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
+  providers: [
+    AuthInterceptorProvider,
+    LoaderInterceptorProvider,
+    LocalDateTimePipe, { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

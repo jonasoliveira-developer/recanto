@@ -85,3 +85,17 @@ td {
   display: inline-block;
   padding: 3rem;
 }
+
+
+element {
+
+  stroke-dasharray: 282.743px;
+  stroke-dashoffset: 141.372px;
+  stroke-width: 10%;
+
+}
+.mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle, .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+
+  stroke: #5eb53f !important;
+
+}

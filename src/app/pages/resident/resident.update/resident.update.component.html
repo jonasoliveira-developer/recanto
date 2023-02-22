@@ -49,6 +49,33 @@
                  type="email">
               </mat-form-field>
 
+              <mat-form-field appearance="fill" class="full">
+                <mat-label>Telefone</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined">phone</span>
+                 </mat-icon>
+                <input
+                [(ngModel)]="resident.phoneNumber"
+                 name="phoneNumber"
+                 matInput 
+                 placeholder="xx 9xxxx-xxxx"
+                 type="text">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="full">
+                <mat-label>Endereço</mat-label>
+                <mat-icon matSuffix>
+                    <span class="material-icons-outlined">roofing</span>
+                 </mat-icon>
+                <textarea
+                [(ngModel)]="resident.adress"
+                 name="endereco"
+                 matInput 
+                 placeholder="Seu endereço"
+                 type="text">
+                 </textarea>
+              </mat-form-field>
+
               <mat-form-field appearance="fill">
                 <mat-label>Senha</mat-label>
                 <mat-icon matSuffix>

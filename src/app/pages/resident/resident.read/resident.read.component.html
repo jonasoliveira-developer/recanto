@@ -1,7 +1,7 @@
 <div class="container">
     
     <form class="form">
-        <h1>Deletar Residente</h1>
+        <h1>Detalhes</h1>
 
             <mat-form-field appearance="fill">
               <mat-label>Nome</mat-label>
@@ -90,20 +90,9 @@
                  >
               </mat-form-field>
           
-       
-          
-        <section class="section">
-            <mat-checkbox  [disabled]="true" class="margin" color="Primary-yellow">Admin</mat-checkbox>
-            <mat-checkbox  [disabled]="true" class="margin" color="primary-yellow">Funcionario</mat-checkbox>
-            <mat-checkbox  [disabled]="true" class="margin" color="primary-yellow">Residente</mat-checkbox>
-          </section>
           <div class="buttons">
-            <button (click)="delete()" mat-button color="primary" >Deletar</button>
             <button (click)="goBack()" mat-button color="warn">Voltar</button>
           </div>
           
     </form>
-    <div class="aside">
-        <img src="../../../../assets/update.svg" alt="">
-    </div>
 </div>

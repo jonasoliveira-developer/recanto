@@ -100,6 +100,16 @@ mat-form-field {
     border-radius: 50%;
 }
 
+.read {
+    color:  #FFF ;
+    
+    background-color:  #C3B4A8;
+    padding: .3rem;
+    margin:.5rem .1rem 0 0;
+    border-radius: 50%;
+}
+
+
 .mat-mdc-raised-button.mat-unthemed {
     --mdc-protected-button-container-color: #69553B;
     --mdc-protected-button-label-text-color: #C3B4A8;

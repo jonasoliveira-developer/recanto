@@ -40,12 +40,12 @@ import { OccurrenceListComponent } from './pages/occurrence/occurrence.list/occu
 import { OccurrenceUpdateComponent } from './pages/occurrence/occurrence.update/occurrence.update.component';
 import { ConciergeListComponent } from './pages/concierge/concierge.list/concierge.list.component';
 import { ConciergeCreateComponent } from './pages/concierge/concierge.create/concierge.create.component';
-
+import { ResidentReadComponent } from './pages/resident/resident.read/resident.read.component';
 
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  
+
   {path:'', component: NavComponent,canActivate: [AuthGuard], children: [
 
     {path:'users', component: UserComponent},
@@ -61,6 +61,7 @@ const routes: Routes = [
     {path:'residents/create', component: ResidentCreateComponent},
     {path:'residents/update/:id', component: ResidentUpdateComponent},
     {path:'residents/delete/:id', component: ResidentDeleteComponent},
+    {path:'residents/read/:id', component: ResidentReadComponent},
 
     {path:'payments', component: PaymentListComponent},
     {path:'payments/report', component: PaymentReportComponent},

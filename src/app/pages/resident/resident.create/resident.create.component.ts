@@ -17,6 +17,8 @@ resident: IResident = {
   name:'',
   cpf:'',
   email:'',
+  phoneNumber:'',
+  adress:'',
   password:'',
   profiles: [],
   date:''
@@ -30,7 +32,7 @@ resident: IResident = {
 name: FormControl = new FormControl(null, Validators.minLength(3));
 cpf: FormControl = new FormControl(null, [Validators.minLength(11), Validators.required]);
 email: FormControl = new FormControl(null, Validators.email);
-password: FormControl = new FormControl(null, Validators.minLength(3))
+
 
   constructor( 
     private service: ResidentService,
@@ -71,8 +73,8 @@ password: FormControl = new FormControl(null, Validators.minLength(3))
     fieldValidate(): boolean {
       return this.name.valid && 
              this.cpf.valid && 
-             this.email.valid && 
-             this.password.valid
+             this.email.valid 
+             
     }
     
     goBack():void {

@@ -1,0 +1,49 @@
+.container {
+    width: 80%; 
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #DDA329;
+}
+
+
+
+.form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    box-sizing:content-box;
+    padding: 1rem;
+   
+
+   
+}
+
+
+h1 {
+    font-size: 2rem;
+    color: #69553B;
+}
+mat-label {
+    color:#69553B;
+}
+
+
+
+@media(max-width:900px) {
+
+    .form {
+        width: 100%;
+    }
+    .container {
+        width: 95%;
+      
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+  }

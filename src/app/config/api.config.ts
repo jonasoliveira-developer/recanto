@@ -1,3 +1,7 @@
 export const API_CONFIG = {
-    baseURL:"https://backend-recanto-production.up.railway.app"
+    baseURL:"http://localhost:8080"
 }
+
+
+//http://localhost:8080
+//https://backend-recanto-production.up.railway.app
